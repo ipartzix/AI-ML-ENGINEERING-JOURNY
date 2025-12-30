@@ -94,3 +94,15 @@ ai-ml-engineering-journey/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+
+
+
+
+
+
+
+
+git add .
+git commit -m "Your commit message"
+git push
+

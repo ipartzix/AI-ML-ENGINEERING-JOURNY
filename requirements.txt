@@ -1,108 +1,79 @@
 ai-ml-engineering-journey/
 │
 ├── 00_Orientation/
-│   └── README.md
+│ └── README.md
+│ # Purpose: Defines goals, rules, tools, and learning philosophy.
 │
 ├── 01_Mathematics/
-│   ├── Linear_Algebra/
-│   │   ├── notes.md
-│   │   ├── vectors_matrices.ipynb
-│   │   └── eigen_svd.ipynb
-│   │
-│   ├── Calculus/
-│   │   ├── notes.md
-│   │   ├── derivatives.ipynb
-│   │   └── gradient_descent.ipynb
-│   │
-│   ├── Probability_Statistics/
-│   │   ├── notes.md
-│   │   ├── distributions.ipynb
-│   │   └── bayes_theorem.ipynb
-│   │
-│   └── Discrete_Math/
-│       └── notes.md
+│ # Purpose: Build strong mathematical foundations for ML and DL.
+│ ├── Linear_Algebra/
+│ ├── Calculus/
+│ ├── Probability_Statistics/
+│ └── Discrete_Math/
 │
 ├── 02_Python_Foundations/
-│   ├── python_basics.ipynb
-│   ├── numpy_practice.ipynb
-│   ├── pandas_practice.ipynb
-│   └── visualization.ipynb
+│ # Purpose: Data handling and numerical computing for ML.
+│ ├── Core Python
+│ ├── NumPy
+│ ├── Pandas
+│ └── Visualization
 │
 ├── 03_Machine_Learning/
-│   ├── ML_Theory/
-│   │   └── notes.md
-│   │
-│   ├── Supervised_Learning/
-│   │   ├── linear_regression/
-│   │   │   ├── model.py
-│   │   │   ├── experiment.ipynb
-│   │   │   └── README.md
-│   │   └── logistic_regression/
-│   │
-│   ├── Unsupervised_Learning/
-│   │   ├── kmeans/
-│   │   └── pca/
-│   │
-│   └── ML_Engineering/
-│       ├── feature_engineering.ipynb
-│       └── model_evaluation.ipynb
+│ # Purpose: Classical ML with theory + from-scratch implementations.
+│ ├── ML_Theory/
+│ ├── Supervised_Learning/
+│ ├── Unsupervised_Learning/
+│ └── ML_Engineering/
 │
 ├── 04_Deep_Learning/
-│   ├── Neural_Networks_From_Scratch/
-│   │   ├── backprop_manual.py
-│   │   └── README.md
-│   │
-│   ├── CNN/
-│   ├── RNN_LSTM/
-│   └── Optimization/
+│ # Purpose: Neural networks and optimization fundamentals.
+│ ├── Neural_Networks_From_Scratch/
+│ ├── CNN/
+│ ├── RNN_LSTM/
+│ └── Optimization/
 │
 ├── 05_Computer_Vision/
-│   ├── image_classification/
-│   ├── object_detection/
-│   └── transfer_learning/
+│ # Purpose: Visual data understanding and representation learning.
+│ ├── Image_Classification
+│ ├── Object_Detection
+│ └── Transfer_Learning
 │
 ├── 06_NLP/
-│   ├── text_preprocessing/
-│   ├── embeddings/
-│   └── transformers/
+│ # Purpose: Language modeling and sequence learning.
+│ ├── Text_Preprocessing
+│ ├── Embeddings
+│ └── Transformers
 │
 ├── 07_LLMs/
-│   ├── transformer_from_scratch/
-│   ├── fine_tuning/
-│   └── inference_pipeline/
+│ # Purpose: Large Language Model internals and applications.
+│ ├── Transformer_From_Scratch
+│ ├── Fine_Tuning
+│ └── Inference_Pipeline
 │
 ├── 08_MLOps/
-│   ├── docker/
-│   ├── mlflow/
-│   ├── ci_cd/
-│   └── deployment/
+│ # Purpose: Production-grade ML systems.
+│ ├── Docker
+│ ├── MLflow
+│ ├── CI_CD
+│ └── Deployment
 │
 ├── 09_Research_Implementations/
-│   ├── attention_is_all_you_need/
-│   ├── bert/
-│   └── yolov8/
+│ # Purpose: Reproducing and understanding influential AI papers.
+│ ├── Attention_Is_All_You_Need
+│ ├── BERT
+│ └── YOLOv8
 │
 ├── 10_End_to_End_Projects/
-│   ├── recommender_system/
-│   ├── ai_chatbot/
-│   └── production_ml_system/
+│ # Purpose: Full ML systems from data ingestion to deployment.
+│ ├── Recommender_System
+│ ├── AI_Chatbot
+│ └── Production_ML_System
 │
 ├── docs/
-│   ├── learning_log.md
-│   └── interview_notes.md
+│ # Purpose: High-level documentation and reflection.
+│ ├── Learning_Log.md
+│ └── Interview_Notes.md
 │
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-
-
-
-
-
-
-
-
-git add .
-git commit -m "Your commit message"
-git push
-

@@ -7,6 +7,18 @@ ai-ml-engineering-journey/
 ├── 01_Mathematics/
 │ # Purpose: Build strong mathematical foundations for ML and DL.
 │ ├── Linear_Algebra/
+│     ├── 01_vectors.ipynb
+│     ├── 02_matrices.ipynb
+│     ├── 03_matrix_multiplication.ipynb
+│     ├── 04_dot_product.ipynb
+│     ├── 05_norms_distance.ipynb
+│     ├── 06_projections.ipynb
+│     ├── 07_rank_independence.ipynb
+│     ├── 08_eigenvectors.ipynb
+│     ├── 09_svd.ipynb
+│     ├── 10_pseudoinverse.ipynb
+│     ├── 11_pca_from_scratch.ipynb
+│
 │ ├── Calculus/
 │ ├── Probability_Statistics/
 │ └── Discrete_Math/

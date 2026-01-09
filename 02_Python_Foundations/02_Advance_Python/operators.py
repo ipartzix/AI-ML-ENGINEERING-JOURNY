@@ -43,3 +43,12 @@ print (m!=n)
 print(m<=n)
 
 print("logical operators ")
+
+print( 22>3 and 23<34)
+
+print( 22>3 or 66<34)
+
+print(12 ==12)
+# true
+print(not 12 == 12)
+# false

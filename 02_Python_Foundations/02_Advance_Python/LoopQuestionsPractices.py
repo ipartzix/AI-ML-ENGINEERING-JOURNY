@@ -128,12 +128,31 @@
 
 
 #Q. check a number palindrome or not
-a =str(input("Enter a string: "))
-# print(a[::-1])
-b=""
-for i in range(len(a)-1,-1,-1):
-    b=b+a[i]
-if(b==a):
-    print("its a palindrome number")
-else:
-    print("Not a palindrome")
+# a =str(input("Enter a string: "))
+# # print(a[::-1])
+# b=""
+# for i in range(len(a)-1,-1,-1):
+#     b=b+a[i]
+# if(b==a):
+#     print("its a palindrome number")
+# else:
+#     print("Not a palindrome")
+#
+
+
+s = "kndjfnwipfcwrm3854345394-3q0/'ASX;A]"
+char = 0
+dig = 0
+spcr = 0
+
+for i in s:
+    if i.isdigit():
+        dig += 1
+    elif i.isalpha():
+        char += 1
+    else:
+        spcr += 1
+
+print(f"Characters: {char}")
+print(f"Digits: {dig}")
+print(f"Special Characters: {spcr}")

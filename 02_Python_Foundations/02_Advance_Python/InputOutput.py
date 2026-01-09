@@ -12,4 +12,3 @@ num = str(input("Enter your number :\n"))
 #get username from them
 Username = input("Enter your username !! \n")
 print(f"Hey {Username} !welcome thanks for conforming , Your age is {agee}")
-

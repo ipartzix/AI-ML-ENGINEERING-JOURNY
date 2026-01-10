@@ -10,3 +10,12 @@ sum(12,45)
 sum(45,55)
 sum(33,55)
 
+# this is a keyword argument
+def hello(name, age):
+    print(f"Hello,your name is  {name} and your age is  {age}!")
+hello(age =20 , name ="partha" )
+
+
+
+
+

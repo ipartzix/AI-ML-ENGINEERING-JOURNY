@@ -11,3 +11,6 @@ for i in range(len(number)):
 # 2nd way of list Traversal Directly on value
 for i in number:
     print(i)
+
+for i in fruits:
+    print(i)

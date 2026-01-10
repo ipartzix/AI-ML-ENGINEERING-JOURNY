@@ -140,19 +140,35 @@
 #
 
 
-s = "kndjfnwipfcwrm3854345394-3q0/'ASX;A]"
-char = 0
-dig = 0
-spcr = 0
+# s = "kndjfnwipfcwrm3854345394-3q0/'ASX;A]"
+# char = 0
+# dig = 0
+# spcr = 0
+#
+# for i in s:
+#     if i.isdigit():
+#         dig += 1
+#     elif i.isalpha():
+#         char += 1
+#     else:
+#         spcr += 1
+#
+# print(f"Characters: {char}")
+# print(f"Digits: {dig}")
+# print(f"Special Characters: {spcr}")
+#
+#
+print("While loop")
 
-for i in s:
-    if i.isdigit():
-        dig += 1
-    elif i.isalpha():
-        char += 1
-    else:
-        spcr += 1
+# number= int(input("Enter a number: "))
+# while 10>number>0:
+#     print(int(number))
+#     number =number+1
 
-print(f"Characters: {char}")
-print(f"Digits: {dig}")
-print(f"Special Characters: {spcr}")
+
+#separate each digit of a number and print it on the new line
+a = int(input("Enter a number: "))
+while a > 0:
+    digit = a % 10    # Gets the last digit (4, then 3...)
+    print(digit)      # Prints it on a new line
+    a = a // 10       # Removes the last digit (1234 -> 123)

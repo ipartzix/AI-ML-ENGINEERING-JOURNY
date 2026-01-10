@@ -167,8 +167,28 @@ print("While loop")
 
 
 #separate each digit of a number and print it on the new line
+# a = int(input("Enter a number: "))
+# while a > 0:
+#     digit = a % 10    # Gets the last digit (4, then 3...)
+#     print(digit)      # Prints it on a new line
+#     a = a // 10       # Removes the last digit (1234 -> 123)
+
+
+
+
+
+# Accept a number and print its reverse
 a = int(input("Enter a number: "))
+reverse = 0
+
 while a > 0:
-    digit = a % 10    # Gets the last digit (4, then 3...)
-    print(digit)      # Prints it on a new line
-    a = a // 10       # Removes the last digit (1234 -> 123)
+    # 1. Get the last digit (Remainder)
+    remainder = a % 10
+
+    # 2. Append it to the reverse number
+    reverse = (reverse * 10) + remainder
+
+    # 3. Remove the last digit from 'a' using integer division
+    a = a // 10
+
+print("Reversed number:", reverse)

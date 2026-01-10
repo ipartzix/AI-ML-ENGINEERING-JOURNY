@@ -15,7 +15,11 @@ def hello(name, age):
     print(f"Hello,your name is  {name} and your age is  {age}!")
 hello(age =20 , name ="partha" )
 
+# default argument
+def summ(a,b=10):
+    print(f"The sum of the number is {a + b}")
 
+summ(12)
 
 
 

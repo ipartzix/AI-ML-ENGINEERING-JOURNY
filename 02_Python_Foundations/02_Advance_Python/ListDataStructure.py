@@ -56,3 +56,7 @@ ind = l.index(10)
 print(ind)
 # find the index value
 
+print("count")
+cnt = l.count(7)
+print(cnt)
+# at first we need to store it inn a variable (  cnt  ) then print it

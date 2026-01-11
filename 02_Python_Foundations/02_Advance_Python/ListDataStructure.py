@@ -43,4 +43,4 @@ print("remove")
 l.remove(1)
 print(l)
 
-# remove the element on this index
+# remove the element by value inputed

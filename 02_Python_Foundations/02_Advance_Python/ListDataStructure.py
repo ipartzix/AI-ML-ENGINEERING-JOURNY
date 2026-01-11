@@ -18,7 +18,7 @@ for i in fruits:
 # Method
 
 print("append")
-l = [1, 2, 3, 4, 5, 6, 7, 7, 7, 7, 8, 9, 10]
+l = [1, 66, 88, 9, 2, 3, 4, 5, 6, 7, 7, 7, 7, 8, 9, 10]
 l.append(12)
 print(l)
 l.append(33)
@@ -47,8 +47,8 @@ print(l)
 
 
 print("pop")
-l.pop(3)
-print(l)
+pp = l.pop(3)
+print(pp)
 # remove the element in index based
 
 print("index")
@@ -60,3 +60,9 @@ print("count")
 cnt = l.count(7)
 print(cnt)
 # at first we need to store it inn a variable (  cnt  ) then print it
+
+
+print("Short")
+l.sort()
+print(l)
+# short nwill short the list based on element size

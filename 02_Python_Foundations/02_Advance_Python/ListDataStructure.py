@@ -72,4 +72,16 @@ print("Reverse")
 l.reverse()
 print(l)
 
-# treverse the list
+# reverse the list
+
+print("copy")
+new_Ls = l.copy()
+print(new_Ls)
+
+# coppy the current list into a new list
+
+print("clear")
+new_Ls.clear()
+print(new_Ls)
+
+# clear all ele,ment from the list

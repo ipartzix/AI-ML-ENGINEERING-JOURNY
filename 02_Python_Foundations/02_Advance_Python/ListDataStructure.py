@@ -36,4 +36,11 @@ m = [22, 33, 44, 55]
 l.extend(m)
 print(l)
 
-# .extend use to add another list and marge it in the current list
+# .extend use to add anot her list and marge it in the current list
+
+
+print("remove")
+l.remove(1)
+print(l)
+
+# remove the element on this index

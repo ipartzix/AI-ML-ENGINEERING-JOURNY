@@ -14,3 +14,11 @@ for i in default_list:
 print("Thank you ")
 
 # Q. Mean of list element
+
+summ = 0
+for i in default_list:
+    summ += i
+print(f"sum is : {summ}")
+
+mean = summ / len(default_list)
+print(f"mean is : {mean}")

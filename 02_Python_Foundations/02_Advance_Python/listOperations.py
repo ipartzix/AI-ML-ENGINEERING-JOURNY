@@ -64,3 +64,14 @@ for i in range(len(lis)):  # Traverse the list using index
 
 print(f"first largest element is : {firstLargest} and its index is : {first_index}")  # Print largest
 print(f"second largest element is : {secondLargest} and its index is : {second_index}")  # Print second largest
+
+# check if list is sorted or not (ascending order)
+
+a = [12, 13, 14, 15, 16]
+
+for i in range(len(a) - 1):  # loop till second last element
+    if a[i] > a[i + 1]:  # violation of sorted order
+        print("list is not sorted")
+        break
+else:
+    print("list is sorted")

@@ -14,3 +14,12 @@ for i in number:
 
 for i in fruits:
     print(i)
+
+# Method
+
+l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+l.append(12)
+print(l)
+l.append(33)
+print(l)
+# append always add element at the last

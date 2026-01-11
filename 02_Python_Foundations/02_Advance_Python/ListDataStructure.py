@@ -44,3 +44,9 @@ l.remove(1)
 print(l)
 
 # remove the element by value inputed
+
+
+print("pop")
+l.pop(3)
+print(l)
+# remove the element in index based

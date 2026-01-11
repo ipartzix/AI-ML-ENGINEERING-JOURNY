@@ -17,9 +17,16 @@ for i in fruits:
 
 # Method
 
+print("append")
 l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 l.append(12)
 print(l)
 l.append(33)
 print(l)
 # append always add element at the last
+
+
+print("Insert")
+l.insert(1, 12)
+print(l)
+# .insert works on index value it add an element at the targeted index just add an new element but do not replace it previous on this index it just shift it (i+1 ; i= targeted index value )

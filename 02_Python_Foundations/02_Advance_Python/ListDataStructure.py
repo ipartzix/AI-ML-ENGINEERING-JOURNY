@@ -50,3 +50,8 @@ print("pop")
 l.pop(3)
 print(l)
 # remove the element in index based
+
+print("index")
+l.index(10)
+print(l)
+# find the index value

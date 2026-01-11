@@ -29,7 +29,7 @@ print(l)
 print("Insert")
 l.insert(1, 12)
 print(l)
-# .insert works on index value it add an element at the targeted index just add an new element but do not replace it previous on this index it just shift it (i+1 ; i= targeted index value )
+# .insert works on index value it add an element at the targeted index just add a new element but do not replace it previous on this index it just shift it (i+1 ; i= targeted index value )
 
 print("Extend")
 m = [22, 33, 44, 55]
@@ -43,7 +43,7 @@ print("remove")
 l.remove(1)
 print(l)
 
-# remove the element by value inputed
+# remove the element by value inputted
 
 
 print("pop")
@@ -59,7 +59,7 @@ print(ind)
 print("count")
 cnt = l.count(7)
 print(cnt)
-# at first we need to store it inn a variable (  cnt  ) then print it
+# at first, we need to store it inn a variable (  cnt  ) then print it
 
 
 print("Sort")

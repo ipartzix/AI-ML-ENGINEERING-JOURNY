@@ -84,4 +84,4 @@ print("clear")
 new_Ls.clear()
 print(new_Ls)
 
-# clear all ele,ment from the list
+# clear all element from the list ny using clear

@@ -62,7 +62,14 @@ print(cnt)
 # at first we need to store it inn a variable (  cnt  ) then print it
 
 
-print("Short")
+print("Sort")
 l.sort()
 print(l)
-# short nwill short the list based on element size
+# sort will short the list based on element size
+
+
+print("Reverse")
+l.reverse()
+print(l)
+
+# treverse the list

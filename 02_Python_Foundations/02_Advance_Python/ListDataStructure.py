@@ -18,7 +18,7 @@ for i in fruits:
 # Method
 
 print("append")
-l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+l = [1, 2, 3, 4, 5, 6, 7, 7, 7, 7, 8, 9, 10]
 l.append(12)
 print(l)
 l.append(33)
@@ -52,6 +52,7 @@ print(l)
 # remove the element in index based
 
 print("index")
-l.index(10)
-print(l)
+ind = l.index(10)
+print(ind)
 # find the index value
+

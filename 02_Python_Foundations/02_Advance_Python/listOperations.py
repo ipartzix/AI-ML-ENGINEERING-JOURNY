@@ -37,7 +37,7 @@ for i in range(len(le)):
 
 print(f"largest element is : {largest} and its index is : {index}")
 
-# Q. find the 2nd greatest element with index
+# Q. find the 2nd greatest element with index print
 
 print("2nd greatest element with index ")  # Display purpose message
 

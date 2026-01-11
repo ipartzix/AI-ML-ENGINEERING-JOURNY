@@ -36,3 +36,31 @@ for i in range(len(le)):
         index = i
 
 print(f"largest element is : {largest} and its index is : {index}")
+
+# Q. find the 2nd greatest element with index
+
+print("2nd greatest element with index ")  # Display purpose message
+
+lis = [12, 33, 44, 55, 66, 1, 4, 6, 99, 32]  # Input list
+
+firstLargest = float('-inf')  # Store the largest value (initialized to -infinity)
+secondLargest = float('-inf')  # Store the second largest value
+
+first_index = -1  # Index of the largest element
+second_index = -1  # Index of the second largest element
+
+for i in range(len(lis)):  # Traverse the list using index
+    if lis[i] > firstLargest:  # If current element is greater than largest
+        secondLargest = firstLargest  # Previous largest becomes second largest
+        second_index = first_index  # Save index of previous largest
+
+        firstLargest = lis[i]  # Update largest value
+        first_index = i  # Update index of largest value
+
+    elif lis[i] > secondLargest and lis[i] != firstLargest:
+        # If current element is between largest and second largest
+        secondLargest = lis[i]  # Update second largest value
+        second_index = i  # Update index of second largest
+
+print(f"first largest element is : {firstLargest} and its index is : {first_index}")  # Print largest
+print(f"second largest element is : {secondLargest} and its index is : {second_index}")  # Print second largest

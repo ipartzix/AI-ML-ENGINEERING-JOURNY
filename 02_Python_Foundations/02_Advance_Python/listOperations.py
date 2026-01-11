@@ -22,3 +22,17 @@ print(f"sum is : {summ}")
 
 mean = summ / len(default_list)
 print(f"mean is : {mean}")
+
+# Q. find greatest element from list
+print("Greatest Element")
+
+le = [22, 4, 5, 66, 88, 23, 76]
+
+largest = le[0]
+index = 0
+for i in range(len(le)):
+    if le[i] > largest:
+        largest = le[i]
+        index = i
+
+print(f"largest element is : {largest} and its index is : {index}")

@@ -12,3 +12,5 @@ for i in default_list:
         print(i)
 
 print("Thank you ")
+
+# Q. Mean of list element

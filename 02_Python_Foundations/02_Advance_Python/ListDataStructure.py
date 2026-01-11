@@ -30,3 +30,10 @@ print("Insert")
 l.insert(1, 12)
 print(l)
 # .insert works on index value it add an element at the targeted index just add an new element but do not replace it previous on this index it just shift it (i+1 ; i= targeted index value )
+
+print("Extend")
+m = [22, 33, 44, 55]
+l.extend(m)
+print(l)
+
+# .extend use to add another list and marge it in the current list

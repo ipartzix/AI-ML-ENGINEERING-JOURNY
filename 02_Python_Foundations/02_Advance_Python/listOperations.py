@@ -75,3 +75,17 @@ for i in range(len(a) - 1):  # loop till second last element
         break
 else:
     print("list is sorted")
+
+print(" frequency count of each element in list ")
+demoList = [1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6]
+
+dic = {}
+
+count = 0
+for i in demoList:
+    if i in dic.keys():
+        dic[i] += 1
+    else:
+        dic[i] = 1
+
+print(dic)

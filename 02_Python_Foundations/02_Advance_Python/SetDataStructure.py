@@ -23,3 +23,6 @@ print(f" the intersection is {t}")
 
 y = b.difference(d)  # b - d
 print(f" the difference is {y}")
+
+sd = b.symmetric_difference(d)  # b ^ d
+print(f" the symmetric_difference is {sd}")

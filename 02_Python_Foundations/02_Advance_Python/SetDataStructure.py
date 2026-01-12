@@ -7,3 +7,7 @@ print(a)
 
 a.pop()
 print(a)
+
+print("clear method ")
+a.clear()
+print(a)

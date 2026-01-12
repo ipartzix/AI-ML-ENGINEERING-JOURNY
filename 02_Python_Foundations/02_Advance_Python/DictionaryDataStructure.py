@@ -7,3 +7,6 @@ print(d)
 
 d[50] = 888  # creating
 print(d)
+
+del d[44]
+print(d)

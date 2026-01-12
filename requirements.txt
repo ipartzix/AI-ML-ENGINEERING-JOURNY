@@ -18,7 +18,7 @@ ai-ml-engineering-journey/
 │     ├── 09_svd.ipynb
 │     ├── 10_pseudoinverse.ipynb
 │     ├── 11_pca_from_scratch.ipynb
-│
+│     ├── 12_rank_independence.ipynb
 │ ├── Calculus/
 │ ├── Probability_Statistics/
 │ └── Discrete_Math/

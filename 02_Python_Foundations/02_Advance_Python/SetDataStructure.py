@@ -72,3 +72,6 @@ print(dic)
 # 1. 'dic' was undefined → initialized using dd1.copy()
 # 2. Used 'dic' for merging, not 'dd2'
 # 3. Printed final merged dictionary instead of dd2
+
+# there are more method or function exist so we can use more function
+#  if we need to use it go to the help section of the python

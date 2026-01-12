@@ -89,3 +89,12 @@ print("Same dict object (deep)?", id(original["details"]) == id(deep_copy["detai
 # INTERVIEW ONE-LINER
 # ------------------------------------------------
 # Shallow copy copies references; deep copy copies objects.
+
+
+print("marge two DICTIONARY")
+d1 = {12: 22, 20: 35, 30: 35, 40: 554}
+d2 = {1: 2, 2: 44, 3: 43, 4: 433, 5: 37}
+for i in d2:
+    d1[i] = d2[i]
+
+print(d1)

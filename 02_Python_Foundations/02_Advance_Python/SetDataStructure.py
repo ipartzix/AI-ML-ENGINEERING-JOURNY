@@ -17,3 +17,6 @@ d = {4, 5, 6, 7, 8}
 
 s = b.union(d)  # b|d
 print(f" the union is {s}")
+
+t = b.intersection(d)  # b & d
+print(f" the intersection is {t}")

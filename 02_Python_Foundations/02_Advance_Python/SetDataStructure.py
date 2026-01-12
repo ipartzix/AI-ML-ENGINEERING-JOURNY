@@ -4,3 +4,6 @@ print(a)
 
 a.remove(2)
 print(a)
+
+a.pop()
+print(a)

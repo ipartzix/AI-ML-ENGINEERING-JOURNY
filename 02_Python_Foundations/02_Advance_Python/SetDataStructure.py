@@ -11,3 +11,9 @@ print(a)
 print("clear method ")
 a.clear()
 print(a)
+
+b = {1, 2, 3, 4, 5}
+d = {4, 5, 6, 7, 8}
+
+s = b.union(d)  # b|d
+print(f" the union is {s}")

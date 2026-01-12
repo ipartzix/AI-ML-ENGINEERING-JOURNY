@@ -20,3 +20,6 @@ print(f" the union is {s}")
 
 t = b.intersection(d)  # b & d
 print(f" the intersection is {t}")
+
+y = b.difference(d)  # b - d
+print(f" the difference is {y}")

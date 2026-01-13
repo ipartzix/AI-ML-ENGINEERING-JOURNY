@@ -1,0 +1,7 @@
+print("File Handling")
+p = open(r"D:\AI ML ENGINEERING JOURNY\02_Python_Foundations\02_Advance_Python\ExceptionHandeling.py")
+print(p.read)
+print('FileHandling.py')
+r = open("superman.txt", "w")
+r.write("this is a demo run for check file handling  just create atxt file of it to check how it work ")
+r.close()

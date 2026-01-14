@@ -6,7 +6,7 @@ ai-ml-engineering-journey/
 │
 ├── 01_Mathematics/
 │ # Purpose: Build strong mathematical foundations for ML and DL.
-│ ├── Linear_Algebra/
+│ ├── Linear_Algebra/ # Purpose: Provide the vector and matrix foundation required to represent data, transformations, and model parameters in ML and DL.
 │     ├── 01_vectors.ipynb
 │     ├── 02_matrices.ipynb
 │     ├── 03_matrix_multiplication.ipynb
@@ -19,7 +19,17 @@ ai-ml-engineering-journey/
 │     ├── 10_pseudoinverse.ipynb
 │     ├── 11_pca_from_scratch.ipynb
 │     ├── 12_rank_independence.ipynb
-│ ├── Calculus/
+
+│ ├── Calculus/ # Purpose: Core calculus needed for ML, DL, and optimization.
+│   ├── 01_derivatives.ipynb
+│   ├── 02_partial_derivatives.ipynb
+│   ├── 03_chain_rule.ipynb
+│   ├── 04_gradients.ipynb
+│   ├── 05_optimization_gradient_descent.ipynb
+│   ├── 06_loss_functions_derivatives.ipynb
+│   ├── 07_backpropagation_math.ipynb
+│   └── 08_calculus_summary.ipynb
+
 │ ├── Probability_Statistics/
 │ └── Discrete_Math/
 │

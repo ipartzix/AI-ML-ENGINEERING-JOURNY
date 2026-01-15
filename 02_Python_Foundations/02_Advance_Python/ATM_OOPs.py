@@ -30,7 +30,16 @@ class Atm:
 # Creating an object of the class
 sbi = Atm()
 
-
 def create_pin(self):
     self.pin = input("Enter pin : ")
     print("Pin created Successfully !")
+
+
+def deposit(self):
+    temp = input("Enter your pin : ")
+    if temp == self.pin:
+        amount = input("Enter amount : ")
+        self.balance = self.balance + amount
+        print("Deposit successful /nYour balance is: ", self.balance)
+    else:
+        print("Invalid pin !")

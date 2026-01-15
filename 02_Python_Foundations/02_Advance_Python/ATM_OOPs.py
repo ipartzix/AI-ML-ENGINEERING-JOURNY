@@ -59,3 +59,10 @@ def withdraw(self):
     else:
         print("Invalid pin !")
 
+
+def check_balance(self):
+    temp = input("Enter your pin: ")
+    if temp == self.pin:
+        print(f"Your balance is: {self.balance}")
+    else:
+        print("Invalid pin!")

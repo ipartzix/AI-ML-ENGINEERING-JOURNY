@@ -17,7 +17,7 @@ class Atm:
                 5.Enter 5 to exit
         """)
         if user_input == "1":  # Fixed: comparing string to string
-            print("Create pin! ")
+            self.create_pin()
         elif user_input == "2":
             print("Deposit pin! ")
         elif user_input == "3":
@@ -27,6 +27,10 @@ class Atm:
         else:
             print("Bye ")
 
-
 # Creating an object of the class
 sbi = Atm()
+
+
+def create_pin(self):
+    self.pin = input("Enter pin : ")
+    print("Pin created Successfully !")

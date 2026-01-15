@@ -38,7 +38,10 @@ class Car:  # always make it capital letter (PascalCase)
         print("The average speed is", avg)
 
 
-my_car = Car()
+my_car = Car()  # object creatuion
 
 # Pass the values for km and time here
 my_car.calculate_avg_speed(120, 2)
+
+# function is a basic function that we alwasys use as a normal way
+#method is a function which is use in class

@@ -8,7 +8,8 @@ class Atm:
         self.menu()
 
     def menu(self):
-        user_input = input(""" 
+        user_input = input(
+            """ 
                 Hello , how would like to proceed ?
                 1.Enter 1 to create pin 
                 2.Enter 2 to deposit 
@@ -16,6 +17,7 @@ class Atm:
                 4.Enter 4 to check balance 
                 5.Enter 5 to exit
         """)
+
         if user_input == "1":  # Fixed: comparing string to string
             self.create_pin()
         elif user_input == "2":
@@ -23,7 +25,7 @@ class Atm:
         elif user_input == "3":
             self.withdraw()
         elif user_input == "4":
-            print("Check balance! ")
+            self.check_balance()
         else:
             print("Bye ")
 
@@ -38,7 +40,7 @@ def create_pin(self):
 def deposit(self):
     temp = input("Enter your pin : ")
     if temp == self.pin:
-        amount = input("Enter amount : ")
+        amount = int(input("Enter amount : "))
         self.balance = self.balance + amount
         print("Deposit successful /nYour balance is: ", self.balance)
     else:
@@ -46,10 +48,14 @@ def deposit(self):
 
 
 def withdraw(self):
-    temp = input("Enter your pin : ")
+    temp = int(input("Enter your pin : "))
     if temp == self.pin:
-        amount = input("Enter amount : ")
-        self.balance = self.balance - amount
-        print("withdraw successful /nYour balance is: ", self.balance)
+        amount = int(input("Enter amount : "))
+        if amount > self.balance:
+            self.balance = self.balance - amount
+            print("withdraw successful /nYour balance is: ", self.balance)
+        else:
+            print("insufficient balance !")
     else:
         print("Invalid pin !")
+

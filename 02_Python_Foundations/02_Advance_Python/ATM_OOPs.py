@@ -14,8 +14,9 @@ class Atm:
     # one method can not access with another method directly they take help of object
     # so for every method self do this job the object is pass through self and without self the code show error
 
-    def menu(self): 
-        user_input = input(
+    def menu(self):
+        while True:
+            user_input = input(
             """ 
                 Hello , how would like to proceed ?
                 1.Enter to create pin 
@@ -24,17 +25,16 @@ class Atm:
                 4.Enter to check balance 
                 5.Enter to exit
         """)
-
-        if user_input == "1":  # Fixed: comparing string to string
-            self.create_pin()  # object_name + Method-name( self is object and create pin is a method)
-        elif user_input == "2":
-            self.deposit()
-        elif user_input == "3":
-            self.withdraw()
-        elif user_input == "4":
-            self.check_balance()
-        else:
-            print("Bye ")
+            if user_input == "1":  # Fixed: comparing string to string
+                self.create_pin()  # object_name + Method-name( self is object and create pin is a method)
+            elif user_input == "2":
+                self.deposit()
+            elif user_input == "3":
+                self.withdraw()
+            elif user_input == "4":
+                self.check_balance()
+            else:
+                print("Bye ")
 
     def create_pin(self):
         self.pin = input("Enter pin : ")
@@ -55,9 +55,10 @@ class Atm:
             amount = int(input("Enter amount : "))
             if amount > self.balance:
                 self.balance = self.balance - amount
-                print("withdraw successful /nYour balance is: ", self.balance)
+                print("withdraw successful  "
+                      "Your balance is: ", self.balance)
             else:
-            print("insufficient balance !")
+                print("insufficient balance !")
         else:
             print("Invalid pin !")
 

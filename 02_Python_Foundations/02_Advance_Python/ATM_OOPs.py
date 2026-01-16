@@ -25,6 +25,10 @@ class Atm:
                 4.Enter to check balance 
                 5.Enter to exit
         """)
+
+            # always write logic inside the method
+            # I have make mistake hare , I write the logical loop function outer the method so the   class don't access it and give me error
+
             if user_input == "1":  # Fixed: comparing string to string
                 self.create_pin()  # object_name + Method-name( self is object and create pin is a method)
             elif user_input == "2":

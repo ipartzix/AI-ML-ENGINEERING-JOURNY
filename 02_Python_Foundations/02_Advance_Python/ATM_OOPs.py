@@ -11,11 +11,11 @@ class Atm:
         user_input = input(
             """ 
                 Hello , how would like to proceed ?
-                1.Enter 1 to create pin 
-                2.Enter 2 to deposit 
-                3.Enter 3 to withdraw 
-                4.Enter 4 to check balance 
-                5.Enter 5 to exit
+                1.Enter to create pin 
+                2.Enter to deposit 
+                3.Enter to withdraw 
+                4.Enter to check balance 
+                5.Enter to exit
         """)
 
         if user_input == "1":  # Fixed: comparing string to string

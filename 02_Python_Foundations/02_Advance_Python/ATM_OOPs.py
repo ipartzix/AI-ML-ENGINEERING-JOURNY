@@ -45,7 +45,8 @@ class Atm:
         if temp == self.pin:
             amount = int(input("Enter amount : "))
             self.balance = self.balance + amount
-            print("Deposit successful /nYour balance is: ", self.balance)
+            print("Deposit successful "
+                  "Your balance is: ", self.balance)
         else:
             print("Invalid pin !")
 

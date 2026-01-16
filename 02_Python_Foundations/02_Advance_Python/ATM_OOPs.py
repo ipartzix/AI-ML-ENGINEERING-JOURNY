@@ -7,7 +7,7 @@ class Atm:
         self.pin = ""
         self.balance = 0
 
-        print(id(self)) 
+        print(id(self))
 
         self.menu()
 
@@ -17,7 +17,7 @@ class Atm:
     def menu(self):
         while True:
             user_input = input(
-            """ 
+                """ 
                 Hello , how would like to proceed ?
                 1.Enter to create pin 
                 2.Enter to deposit 
@@ -43,11 +43,12 @@ class Atm:
             else:
                 print("invalid input")
 
-
+    # for creating pin for new user
     def create_pin(self):
         self.pin = input("Enter pin : ")
         print("Pin created Successfully !")
 
+    # for deposit money
     def deposit(self):
         temp = input("Enter your pin : ")
         if temp == self.pin:
@@ -58,6 +59,7 @@ class Atm:
         else:
             print("Invalid pin !")
 
+    #for withdraw money
     def withdraw(self):
         temp = input("Enter your pin : ")
         if temp == self.pin:
@@ -71,8 +73,9 @@ class Atm:
         else:
             print("Invalid pin !")
 
+    # for balance chacking
     def check_balance(self):
-        temp = int(input("Enter your pin: "))
+        temp = input("Enter your pin: ")  #input always take as string
         if temp == self.pin:
             print(f"Your balance is: {self.balance}")
         else:

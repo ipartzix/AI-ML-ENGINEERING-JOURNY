@@ -38,6 +38,11 @@ class Fraction:
         # Returning result as a string
         return "{}/{}".format(temp_num, temp_den)
 
+    def __truediv__(self, other):
+        temp_num = self.num * other.den
+        temp_den = self.den * other.num
+        return "{}/{}".format(temp_num, temp_den)
+
 
 # Creating Fraction objects
 x = Fraction(3, 4)
@@ -51,3 +56,4 @@ print(y)  # Calls __str__ → "5/6"
 print(x + y)  # Calls __add__
 print(x - y)  # Calls __sub__
 print(x * y)  # Calls __mul__
+print(x / y)  # Calls __truediv__

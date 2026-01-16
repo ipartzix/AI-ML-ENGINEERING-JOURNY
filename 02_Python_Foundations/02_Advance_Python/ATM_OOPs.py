@@ -2,8 +2,13 @@
 # to understand the concept of Object-Oriented-Programming
 class Atm:
     def __init__(self):  # __init__ is a constructor // Constructor is a special method  ,< self > always run itself
+        # self is the object that we are working right now
+        # for our case we create an object name is sbi [ sbi = Atm() ]
         self.pin = ""
         self.balance = 0
+
+        print(id(self))
+
 
         self.menu()
 

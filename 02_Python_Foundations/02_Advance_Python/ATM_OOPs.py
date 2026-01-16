@@ -26,7 +26,7 @@ class Atm:
         """)
 
         if user_input == "1":  # Fixed: comparing string to string
-            self.create_pin()
+            self.create_pin()  # object_name + Method-name( self is object and create pin is a method)
         elif user_input == "2":
             self.deposit()
         elif user_input == "3":
@@ -36,40 +36,38 @@ class Atm:
         else:
             print("Bye ")
 
+    def create_pin(self):
+        self.pin = input("Enter pin : ")
+        print("Pin created Successfully !")
+
+    def deposit(self):
+        temp = input("Enter your pin : ")
+        if temp == self.pin:
+            amount = int(input("Enter amount : "))
+            self.balance = self.balance + amount
+            print("Deposit successful /nYour balance is: ", self.balance)
+        else:
+            print("Invalid pin !")
+
+    def withdraw(self):
+        temp = int(input("Enter your pin : "))
+        if temp == self.pin:
+            amount = int(input("Enter amount : "))
+            if amount > self.balance:
+                self.balance = self.balance - amount
+                print("withdraw successful /nYour balance is: ", self.balance)
+            else:
+            print("insufficient balance !")
+        else:
+            print("Invalid pin !")
+
+    def check_balance(self):
+        temp = input("Enter your pin: ")
+        if temp == self.pin:
+            print(f"Your balance is: {self.balance}")
+        else:
+            print("Invalid pin!")
+
+
 # Creating an object of the class
 sbi = Atm()
-
-def create_pin(self):
-    self.pin = input("Enter pin : ")
-    print("Pin created Successfully !")
-
-
-def deposit(self):
-    temp = input("Enter your pin : ")
-    if temp == self.pin:
-        amount = int(input("Enter amount : "))
-        self.balance = self.balance + amount
-        print("Deposit successful /nYour balance is: ", self.balance)
-    else:
-        print("Invalid pin !")
-
-
-def withdraw(self):
-    temp = int(input("Enter your pin : "))
-    if temp == self.pin:
-        amount = int(input("Enter amount : "))
-        if amount > self.balance:
-            self.balance = self.balance - amount
-            print("withdraw successful /nYour balance is: ", self.balance)
-        else:
-            print("insufficient balance !")
-    else:
-        print("Invalid pin !")
-
-
-def check_balance(self):
-    temp = input("Enter your pin: ")
-    if temp == self.pin:
-        print(f"Your balance is: {self.balance}")
-    else:
-        print("Invalid pin!")

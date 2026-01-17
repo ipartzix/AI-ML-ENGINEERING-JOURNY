@@ -57,3 +57,5 @@ print(x + y)  # Calls __add__
 print(x - y)  # Calls __sub__
 print(x * y)  # Calls __mul__
 print(x / y)  # Calls __truediv__
+
+# Reference variable :- When creating an Object we create an object and store the object in a variable this variable called reference variable

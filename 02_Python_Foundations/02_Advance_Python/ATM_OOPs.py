@@ -32,7 +32,7 @@ class Atm:
 
     def set_counter(new):
         if type(new) == int:
-            Atm.counter = new
+            Atm.__counter = new
         else:
             print("Not Allow")
 

@@ -17,3 +17,4 @@ cust = Customer("Partha", "Male")
 print(cust.name)
 
 greet(cust)
+# it can be mutable

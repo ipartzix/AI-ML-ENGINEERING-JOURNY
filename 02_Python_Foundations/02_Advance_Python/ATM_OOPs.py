@@ -4,7 +4,7 @@
 
 class Atm:
     # static/class
-    counter = 1  # this type of thing always out of the constructor but under the class
+    __counter = 1  # this type of thing always out of the constructor but under the class
 
     def __init__(self):
         # instance variable :-it is a kind of variable for which the value of the variable is different for different object
@@ -17,8 +17,8 @@ class Atm:
         self.__pin = ""  # hide the data using Double underscore (__) *****Encapsulation
         self.__balance = 0  # hide the data using Double underscore (__) *****Encapsulation
         # Nothing in python truly private
-        self.sno = Atm.counter
-        Atm.counter = Atm.counter + 1
+        self.sno = Atm.__counter
+        Atm.__counter = Atm.__counter + 1  # make counter encapsuled
         # always add one when the object will call it
         print(id(self))
 

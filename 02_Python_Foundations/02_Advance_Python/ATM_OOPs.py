@@ -4,17 +4,20 @@ class Atm:
     def __init__(self):  # __init__ is a constructor // Constructor is a special method  ,< self > always run itself
         # self is the object that we are working right now
         # for our case we create an object name is sbi [ sbi = Atm() ]
-        self.pin = ""
-        self.balance = 0
+
+        # instance variable :-it is a kind of variable for which the value of the variable is different for different object
+
+        self.__pin = ""  # hide the data using Double underscore (__) *****Encapsulation
+        self.__balance = 0  # hide the data using Double underscore (__) *****Encapsulation
 
         print(id(self))
 
-        self.menu()
+        self.__menu()
 
     # one method can not access with another method directly they take help of object
     # so for every method self do this job the object is pass through self and without self the code show error
 
-    def menu(self):
+    def __menu(self):
         while True:
             user_input = input(
                 """ 
@@ -45,29 +48,29 @@ class Atm:
 
     # for creating pin for new user
     def create_pin(self):
-        self.pin = input("Enter pin : ")
+        self.__pin = input("Enter pin : ")
         print("Pin created Successfully !")
 
     # for deposit money
     def deposit(self):
         temp = input("Enter your pin : ")
-        if temp == self.pin:
+        if temp == self.__pin:
             amount = int(input("Enter amount : "))
-            self.balance = self.balance + amount
+            self.__balance = self.__balance + amount
             print("Deposit successful "
-                  "Your balance is: ", self.balance)
+                  "Your balance is: ", self.__balance)
         else:
             print("Invalid pin !")
 
     #for withdraw money
     def withdraw(self):
         temp = input("Enter your pin : ")
-        if temp == self.pin:
+        if temp == self.__pin:
             amount = int(input("Enter amount : "))
-            if self.balance >= amount:
-                self.balance = self.balance - amount
+            if self.__balance >= amount:
+                self.__balance = self.__balance - amount
                 print("withdraw successful  "
-                      "Your balance is: ", self.balance)
+                      "Your balance is: ", self.__balance)
             else:
                 print("insufficient balance !")
         else:
@@ -76,8 +79,8 @@ class Atm:
     # for balance chacking
     def check_balance(self):
         temp = input("Enter your pin: ")  #input always take as string
-        if temp == self.pin:
-            print(f"Your balance is: {self.balance}")
+        if temp == self.__pin:
+            print(f"Your balance is: {self.__balance}")
         else:
             print("Invalid pin!")
 

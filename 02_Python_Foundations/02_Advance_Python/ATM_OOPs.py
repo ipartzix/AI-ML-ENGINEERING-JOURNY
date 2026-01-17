@@ -14,6 +14,21 @@ class Atm:
 
         self.__menu()
 
+        def get_pin(self):
+            return self.__pin
+
+        def set_pin(self, new_pin):
+            self.__pin = new_pin
+            print("pin changed successfully !")
+
+
+
+
+
+
+
+
+
     # one method can not access with another method directly they take help of object
     # so for every method self do this job the object is pass through self and without self the code show error
 

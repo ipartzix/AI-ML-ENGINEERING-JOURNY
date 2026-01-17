@@ -19,6 +19,7 @@ class Atm:
         # Nothing in python truly private
         self.sno = Atm.counter
         Atm.counter = Atm.counter + 1
+        # always add one when the object will call it
         print(id(self))
 
         self.__menu()

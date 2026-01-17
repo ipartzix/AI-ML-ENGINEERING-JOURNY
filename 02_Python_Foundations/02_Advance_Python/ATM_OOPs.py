@@ -1,15 +1,24 @@
 # It is a full flared ATM machine system design in oops code structure
 # to understand the concept of Object-Oriented-Programming
+
+
 class Atm:
-    def __init__(self):  # __init__ is a constructor // Constructor is a special method  ,< self > always run itself
+    # static/class
+    counter = 1  # this type of thing always out of the constructor but under the class
+
+    def __init__(self):
+        # instance variable :-it is a kind of variable for which the value of the variable is different for different object
+
+        # __init__ is a constructor // Constructor is a special method  ,< self > always run itself
         # self is the object that we are working right now
         # for our case we create an object name is sbi [ sbi = Atm() ]
 
-        # instance variable :-it is a kind of variable for which the value of the variable is different for different object
 
         self.__pin = ""  # hide the data using Double underscore (__) *****Encapsulation
         self.__balance = 0  # hide the data using Double underscore (__) *****Encapsulation
         # Nothing in python truly private
+        self.sno = Atm.counter
+        Atm.counter = Atm.counter + 1
         print(id(self))
 
         self.__menu()

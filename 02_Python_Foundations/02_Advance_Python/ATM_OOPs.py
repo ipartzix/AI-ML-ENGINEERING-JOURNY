@@ -24,6 +24,18 @@ class Atm:
 
         self.__menu()
 
+    @staticmethod
+    def get_counter():
+        return Atm.__counter
+
+    @staticmethod
+
+    def set_counter(new):
+        if type(new) == int:
+            Atm.counter = new
+        else:
+            print("Not Allow")
+
         def get_pin(self):
             return self.__pin
 

@@ -9,7 +9,7 @@ class User:
 
 class Student(
     User):  # in student class we use "(User) inside the  student class that inherit thr property of parent class
-
+    # student can use user class butr user can not use student class
     def enroll(self):
         print("Enroll")
 

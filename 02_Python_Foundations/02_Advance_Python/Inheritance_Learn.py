@@ -35,6 +35,8 @@ class Phone:
         return f"brand={self.brand},model={self.model} and price is {self.price} ,"
 
 
+# child class can not use or access parent class hidden member can not access
+
 class SmartPhone(Phone):
     pass
 

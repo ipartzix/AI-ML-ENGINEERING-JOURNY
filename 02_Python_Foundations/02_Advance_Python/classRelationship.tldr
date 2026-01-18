@@ -274,7 +274,7 @@
 							"content": [
 								{
 									"type": "text",
-									"text": "Inharite possible "
+									"text": "Inharite not possible "
 								}
 							]
 						},
@@ -338,7 +338,7 @@
 			"typeName": "binding"
 		},
 		{
-			"x": -279.2786590386472,
+			"x": -109.10448019187173,
 			"y": -679.0742823762212,
 			"z": 0.42897224769763126,
 			"meta": {},
@@ -635,12 +635,12 @@
 			"typeName": "shape"
 		},
 		{
-			"editingShapeId": null,
+			"editingShapeId": "shape:AudeZ-xh3Cpnx1hmportB",
 			"croppingShapeId": null,
 			"selectedShapeIds": [
 				"shape:AudeZ-xh3Cpnx1hmportB"
 			],
-			"hoveredShapeId": null,
+			"hoveredShapeId": "shape:AudeZ-xh3Cpnx1hmportB",
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
 			"focusedGroupId": null,

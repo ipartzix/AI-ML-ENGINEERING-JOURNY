@@ -23,3 +23,21 @@ stu1.enroll()
 stu1.review()
 stu1.login()
 stu1.register()
+
+
+class Phone:
+    def __init__(self, price, brand, model):
+        self.price = price
+        self.brand = brand
+        self.model = model
+
+    def __str__(self):
+        return f"brand={self.brand},model={self.model} and price is {self.price} ,"
+
+
+class SmartPhone(Phone):
+    pass
+
+
+s = SmartPhone(100000, "apple", "17 PRO MAX")
+print(s)

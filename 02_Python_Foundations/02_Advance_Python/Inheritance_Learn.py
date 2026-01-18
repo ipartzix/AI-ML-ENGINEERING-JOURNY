@@ -43,3 +43,5 @@ class SmartPhone(Phone):
 
 s = SmartPhone(100000, "apple", "17 PRO MAX")
 print(s)
+
+# when 2 or more method are available in parent and child both class it always run child class method  it called method overwriting

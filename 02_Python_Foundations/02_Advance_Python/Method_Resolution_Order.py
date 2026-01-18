@@ -15,7 +15,7 @@ class C(A):
         super().show()
 
 
-class D(B, C):  # whic is come 1st that will work or print it call MRO
+class D(B, C):  # which is come 1st that will work or print it call MRO
     pass
 
 

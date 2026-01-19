@@ -15,10 +15,8 @@ class MemberID:  # parent class
         if UserID == 1:
             return self.loginAcc()  # replace the return position for fix (But menu() still blindly returns True.)
 
-
         elif UserID == 2:
-            self.createAcc()
-            return True
+            return self.createAcc()
 
         else:
             print("Wrong entry!!!!!!")
@@ -31,6 +29,8 @@ class MemberID:  # parent class
         self.__username = input("Enter your Username :-")
         self.__password = input("Enter your Password :-")
         print(" Account Created successful")
+        return True  # this return statement work as a signal that “This operation succeeded. You may continue".
+        # Without this signal, Python assumes failure or unknown state.
 
 
     # ____________________Login Section____________________

@@ -42,7 +42,6 @@ class MemberID:  # parent class
         if self.__username == try_username and self.__password == try_password:
             print("login Successful")
             return True
-
         else:
             print("Login Failed! Incorrect username or password.")
             return False
@@ -59,6 +58,29 @@ class UserData(MemberID):  # Child class
         self.__age = None
         self.__gender = None
         self.__phone = None
+
+        # We OVERRIDE loginAcc to add the profile update logic
+
+    def loginAcc(self):
+        # 1. Call the parent's login logic first
+        success = super().loginAcc()
+
+        # This is for login user to ask update profile or not
+
+        # 2. If login was successful, ask for update
+        if success:
+            update = input("""Would you like to update profile? 
+            1 for Yes
+            2 for No 
+             """)
+            if update == "1":
+                self.updateProfile()
+                self.showProfile()
+            else:
+                print("ok")
+        return success
+
+
 
     # ----- setup or update full profile -----
 
@@ -82,5 +104,3 @@ class UserData(MemberID):  # Child class
 
 user1 = UserData()
 user1.menu()
-user1.updateProfile()
-user1.showProfile()

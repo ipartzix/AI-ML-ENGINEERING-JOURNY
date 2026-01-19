@@ -12,9 +12,9 @@ class MemberID:
         Enter 1 for YES
         Enter 2 for NO\n"""))
         if UserID == 1:
-            print("Welcome back")
+            self.loginAcc()
         elif UserID == 2:
-            print("Create an account")
+            self.createAcc()
         else:
             print("Wrong entry!!!!!!")
 
@@ -24,7 +24,8 @@ class MemberID:
         print("create acc")
         self.__username = input("Enter your Username :-")
         self.__password = input("Enter your Password :-")
-        print(" Account Create successful")
+        print(" Account Created successful")
+        self.loginAcc()
 
     # ____________________Login Section______________________
 

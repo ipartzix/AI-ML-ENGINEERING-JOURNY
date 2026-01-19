@@ -3,9 +3,7 @@ class MemberID:
         self.__username = "ipartzix"
         self.__password = "1234"  # password and username both are use as string
 
-        # self.__age=""
-        # self.__gender =""
-        # self.__phone=""
+
 
     def menu(self, ):
         UserID = int(input("""Did you have already Account ?\n
@@ -43,5 +41,38 @@ class MemberID:
             print("Login Failed! Incorrect username or password.")
 
 
-b = MemberID()
-b.menu()
+# ___________Add Additional user Information_____________
+
+
+class UserData(MemberID):
+    def __init__(self):
+        super().__init__()  # initialize MemberID
+        self.__name = None
+        self.__age = None
+        self.__gender = None
+        self.__phone = None
+
+    # ----- setup full profile -----
+
+    def completeProfile(self):
+        print("-----Complete Your Profile-----")
+        self.__name = input("Name is :-")
+        self.__age = input("Age is:-")
+        self.__gender = input("Gender is:-")
+        self.__phone = input("Phone is:-")
+        print("Successfully profile created ")
+
+    # ----- Show full profile -----
+
+    def showProfile(self):
+        print("\n----- User Profile -----")
+        print(f"Name   : {self.__name}")
+        print(f"Age    : {self.__age}")
+        print(f"Gender : {self.__gender}")
+        print(f"Phone  : {self.__phone}")
+
+
+user = UserData()
+
+if user.menu():  # login or signup success
+    user.completeProfile()

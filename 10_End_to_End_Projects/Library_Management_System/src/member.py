@@ -82,9 +82,11 @@ class UserData(MemberID):  # Child class
 
     # This is for user who recently created account he needs to complete profile
     def createAcc(self):
-        super().createAcc()
-        self.updateProfile()
-        self.showProfile()
+        success = super().createAcc()
+        if success:
+            self.updateProfile()
+            self.showProfile()
+        return success
 
     # ----- setup or update full profile -----
 

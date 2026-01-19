@@ -1,50 +1,61 @@
-class MemberID:
+class MemberID:  # parent class
+
+
     def __init__(self):
         self.__username = "ipartzix"
         self.__password = "1234"  # password and username both are use as string
 
 
+#_____________Authentication section________________
 
-    def menu(self, ):
+    def menu(self):
         UserID = int(input("""Did you have already Account ?\n
-        Enter 1 for YES
-        Enter 2 for NO\n"""))
+        1. YES
+        2. NO \n"""))
         if UserID == 1:
             self.loginAcc()
+            return True
+
         elif UserID == 2:
             self.createAcc()
+            return True
+
         else:
             print("Wrong entry!!!!!!")
+            return False
 
-    # _____________________Create Account section____________
+    # _______________Create Account section________________
 
     def createAcc(self):
-        print("create acc")
+        print("--------Create account---------")
         self.__username = input("Enter your Username :-")
         self.__password = input("Enter your Password :-")
         print(" Account Created successful")
         self.loginAcc()
 
-    # ____________________Login Section______________________
+    # ____________________Login Section____________________
 
     def loginAcc(self):
-        print("login acc")
+        print("---------Login account----------")
         try_username = input("Enter your Username :-")
         try_password = input("Enter your Password :-")
 
-        # ___________ Logical AND, comparing strings______________
+        # __________Logical AND, comparing strings_____________
 
         if self.__username == try_username and self.__password == try_password:
             print("login Successful")
+            return True
 
         else:
             print("Login Failed! Incorrect username or password.")
+            return False
 
 
-# ___________Add Additional user Information_____________
+# ____________Add Additional user Information_____________
 
 
-class UserData(MemberID):
+class UserData(MemberID):  # Child class
+
     def __init__(self):
         super().__init__()  # initialize MemberID
         self.__name = None
@@ -72,7 +83,9 @@ class UserData(MemberID):
         print(f"Phone  : {self.__phone}")
 
 
-user = UserData()
+user = MemberID()
+user.menu()
 
-if user.menu():  # login or signup success
-    user.completeProfile()
+s = UserData()
+s.completeProfile()
+s.showProfile()

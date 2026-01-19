@@ -31,7 +31,7 @@ class MemberID:  # parent class
         self.__username = input("Enter your Username :-")
         self.__password = input("Enter your Password :-")
         print(" Account Created successful")
-        self.loginAcc()
+
 
     # ____________________Login Section____________________
 
@@ -39,9 +39,6 @@ class MemberID:  # parent class
         print("---------Login account----------")
         try_username = input("Enter your Username :-")
         try_password = input("Enter your Password :-")
-
-        # __________Logical AND, comparing strings_____________
-
         if self.__username == try_username and self.__password == try_password:
             print("login Successful")
             return True
@@ -71,7 +68,7 @@ class UserData(MemberID):  # Child class
         self.__age = input("Age is:-")
         self.__gender = input("Gender is:-")
         self.__phone = input("Phone is:-")
-        print("Successfully profile created ")
+        print("Successfully profile Updated ")
 
     # ----- Show full profile -----
 
@@ -83,9 +80,7 @@ class UserData(MemberID):  # Child class
         print(f"Phone  : {self.__phone}")
 
 
-user = MemberID()
-user.menu()
-
-s = UserData()
-s.completeProfile()
-s.showProfile()
+user1 = UserData()
+user1.menu()
+user1.completeProfile()
+user1.showProfile()

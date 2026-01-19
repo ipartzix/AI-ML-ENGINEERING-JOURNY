@@ -60,9 +60,9 @@ class UserData(MemberID):  # Child class
         self.__gender = None
         self.__phone = None
 
-    # ----- setup full profile -----
+    # ----- setup or update full profile -----
 
-    def completeProfile(self):
+    def updateProfile(self):
         print("-----Complete Your Profile-----")
         self.__name = input("Name is :-")
         self.__age = input("Age is:-")
@@ -82,5 +82,5 @@ class UserData(MemberID):  # Child class
 
 user1 = UserData()
 user1.menu()
-user1.completeProfile()
+user1.updateProfile()
 user1.showProfile()

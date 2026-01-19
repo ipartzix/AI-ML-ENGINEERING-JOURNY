@@ -1,7 +1,7 @@
 class MemberID:
     def __init__(self):
         self.__username = "ipartzix"
-        self.__password = "1234"
+        self.__password = "1234"  # password and username both are use as string
 
         # self.__age=""
         # self.__gender =""

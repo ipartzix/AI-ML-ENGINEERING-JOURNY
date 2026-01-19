@@ -13,8 +13,8 @@ class MemberID:  # parent class
         1. YES
         2. NO \n"""))
         if UserID == 1:
-            self.loginAcc()
-            return True
+            return self.loginAcc()  # replace the return position for fix (But menu() still blindly returns True.)
+
 
         elif UserID == 2:
             self.createAcc()
@@ -82,10 +82,9 @@ class UserData(MemberID):  # Child class
 
     # This is for user who recently created account he needs to complete profile
     def createAcc(self):
-        complete = super().createAcc()
+        super().createAcc()
         self.updateProfile()
         self.showProfile()
-
 
     # ----- setup or update full profile -----
 

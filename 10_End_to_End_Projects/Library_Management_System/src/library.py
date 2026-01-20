@@ -1,3 +1,4 @@
+from datetime import date, timedelta
 
 from book import Book
 from books_data import BOOKS_BY_CATEGORY
@@ -40,7 +41,14 @@ class Library:
 
         for data in category["books"]:
             if data["id"] == book_ID:
+                issue_date = date.today()
+                due_date = issue_date + timedelta(days=15)
+                # implement a dictionary for store issue record
+                issue_record = {
+
+                }
                 print(f"\nBook Issued: {data['title']}")
+
                 print("book issue done")
                 return True
 
@@ -55,11 +63,8 @@ class Library:
     def bookAvailable(self):
         print("Book availability check")
 
-    def dueCalculation(self):
-        print("Due calculation")
-
-    def fineCalculation(self):
-        print("Fine calculation ")
+    def ueAndFineCalculation(self):
+        print("Due and fine  calculation")
 
 
 book = Library()

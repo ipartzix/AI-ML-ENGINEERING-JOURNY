@@ -1,3 +1,4 @@
+
 from book import Book
 from books_data import BOOKS_BY_CATEGORY
 
@@ -14,7 +15,10 @@ class Library:
         for key, value in BOOKS_BY_CATEGORY.items():
             print(f"key:-{key}. {value['name']}")
 
-    # _____________________ user select single domain_______________________
+    # _____________________user select single domain_______________________
+
+
+
     def userBook(self):
         choice = input("\nEnter category key: ")
         category = BOOKS_BY_CATEGORY.get(choice)
@@ -29,8 +33,9 @@ class Library:
 
         return category
 
-    def bookIssue(self):
-        print("book issue done")
+    # ______________book issue section_________________
+
+    # ________________book return section________________
 
     def bookReturn(self):
         print("book return")
@@ -47,4 +52,8 @@ class Library:
 
 book = Library()
 book.show_categories()
-book.userBook()
+
+selected_category = book.userBook()
+
+if selected_category:
+    book.bookIssue(selected_category)

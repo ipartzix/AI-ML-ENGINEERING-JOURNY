@@ -35,6 +35,18 @@ class Library:
 
     # ______________book issue section_________________
 
+    def bookIssue(self, category):
+        book_ID = input("\nEnter the book ID to issue this book: ")
+
+        for data in category["books"]:
+            if data["id"] == book_ID:
+                print(f"\nBook Issued: {data['title']}")
+                print("book issue done")
+                return True
+
+        print("BOOK NOT FOUND")
+        return False
+
     # ________________book return section________________
 
     def bookReturn(self):

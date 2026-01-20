@@ -5,6 +5,12 @@ class MemberID:  # parent class
         self.__username = "ipartzix"
         self.__password = "1234"  # password and username both are use as string
 
+    # --------------- Getter for username (for child classes) ---------------
+    def get_username(self):
+        return self.__username
+
+    def get_password(self):
+        return self.__password
 
 #_____________Authentication section________________
 
@@ -46,11 +52,6 @@ class MemberID:  # parent class
             print("Login Failed! Incorrect username or password.")
             return False
 
-    # --------------- Getter for username (for child classes) ---------------
-    def get_username(self):
-        return self.__username
-
-
 # ____________Add Additional user Information_____________
 
 
@@ -58,7 +59,6 @@ class UserData(MemberID):  # Child class
 
     def __init__(self):
         super().__init__()  # initialize MemberID
-        self._MemberID__username = None
         self.__name = None
         self.__age = None
         self.__gender = None
@@ -67,7 +67,7 @@ class UserData(MemberID):  # Child class
     # _______________add user identity for specific book issue________________
     def get_user_identity(self):
         return {
-            "username": self._MemberID__username,
+            "username": self.get_username(),
             "name": self.__name
         }
 
@@ -89,7 +89,7 @@ class UserData(MemberID):  # Child class
                 self.updateProfile()
                 self.showProfile()
             else:
-                print("ok")
+                print("It's Okay")
         return success
 
     # This is for user who recently created account he needs to complete profile

@@ -141,5 +141,7 @@ BOOKS_BY_CATEGORY = {  # 1,2,.....10 all are the category_key
     "10": {"name": "General & Reference", "books": GEN_BOOKS},
 }
 
-for category_key, category_data in BOOKS_BY_CATEGORY.items():
-    print(f"{category_key}. {category_data['name']}")
+# for category_key, category_data in BOOKS_BY_CATEGORY.items():
+#     print(f"{category_key}. {category_data['name']}")
+
+# this is just check that all are run correctly or not

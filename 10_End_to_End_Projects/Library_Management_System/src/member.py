@@ -46,6 +46,10 @@ class MemberID:  # parent class
             print("Login Failed! Incorrect username or password.")
             return False
 
+    # --------------- Getter for username (for child classes) ---------------
+    def get_username(self):
+        return self.__username
+
 
 # ____________Add Additional user Information_____________
 

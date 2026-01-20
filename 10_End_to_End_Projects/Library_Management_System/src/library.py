@@ -8,6 +8,7 @@ class Library:
 
     def __init__(self, categories=None):
         self.categories = categories
+        self.current_user = None
 
     # _______________________Display book categories___________________________
 
@@ -36,24 +37,39 @@ class Library:
 
     # ______________book issue section_________________
 
-    def bookIssue(self, category):
-        book_ID = input("\nEnter the book ID to issue this book: ")
+    def bookIssue(self, get_username, get_password, category):
+        if get_username():
+            get_password():
+            self.__username
+            print("Login Required ")
+            return None
+        else:
+            book_ID = input("\nEnter the book ID to issue this book: ")
 
-        for data in category["books"]:
-            if data["id"] == book_ID:
-                issue_date = date.today()
-                due_date = issue_date + timedelta(days=15)
-                # implement a dictionary for store issue record
-                issue_record = {
+            for data in category["books"]:
+                if data["id"] == book_ID:
+                    issue_date = date.today()
+                    due_date = issue_date + timedelta(days=15)  # implement a dictionary for store issue record
+                    issue_record = {
+                        "__username": self.current_user["name"],
+                        "book_id": data["id"],
+                        "title": data["title"],
+                        "issue_date": issue_date,
+                        "due_date": due_date,
+                        "returned": False
+                    }
+                    print(f"\nBook Issued to {self.current_user['name']}")
+                    print(f"Due Date: {due_date}")
 
-                }
-                print(f"\nBook Issued: {data['title']}")
-
-                print("book issue done")
+                    return issue_record
                 return True
+            print("BOOK NOT FOUND")
+            return False
+        if not self.current_user:
+            print("Login Required ")
+            return None
 
-        print("BOOK NOT FOUND")
-        return False
+
 
     # ________________book return section________________
 
@@ -67,10 +83,4 @@ class Library:
         print("Due and fine  calculation")
 
 
-book = Library()
-book.show_categories()
 
-selected_category = book.userBook()
-
-if selected_category:
-    book.bookIssue(selected_category)

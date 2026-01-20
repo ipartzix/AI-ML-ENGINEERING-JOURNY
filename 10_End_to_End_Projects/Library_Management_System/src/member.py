@@ -64,6 +64,12 @@ class UserData(MemberID):  # Child class
         self.__gender = None
         self.__phone = None
 
+    def authenticate(self):
+        success = self.menu()
+        if success:
+            return self.get_user_identity()
+        return None
+
     # _______________add user identity for specific book issue________________
     def get_user_identity(self):
         return {
@@ -118,6 +124,3 @@ class UserData(MemberID):  # Child class
         print(f"Age    : {self.__age}")
         print(f"Gender : {self.__gender}")
         print(f"Phone  : {self.__phone}")
-
-user1 = UserData()
-user1.menu()

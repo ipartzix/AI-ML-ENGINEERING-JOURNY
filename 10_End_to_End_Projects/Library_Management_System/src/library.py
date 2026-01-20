@@ -1,18 +1,33 @@
-# Make a a book section
-class Category:
-    def __init__(self):
-        self.section()
+from books_data import BOOKS_BY_CATEGORY
 
-    def section(self):
-        print("""
-        1. Computer Science (CS)
-        2. Artificial Intelligence & Machine Learning
-        3. Programming Languages
-        4. Mathematics
-        5. Data Science & Big Data
-        6. Systems & Low-Level Engineering
-        7. Cyber Security
-        8. Electronics & Hardware
-        9. Competitive Programming
-        10. General & Reference
-        """)
+
+class Library:
+
+    def __init__(self, categories=None):
+        self.categories = categories
+
+    # _______________________Display book categories___________________________
+
+    def show_categories(self):
+        print("\n_______ Book Categories _______")
+        for key, value in BOOKS_BY_CATEGORY.items():
+            print(f"{key}. {value['name']}")
+
+    def bookIssue(self):
+        print("book issue done")
+
+    def bookReturn(self):
+        print("book return")
+
+    def bookAvailable(self):
+        print("Book availability check")
+
+    def dueCalculation(self):
+        print("Due calculation")
+
+    def fineCalculation(self):
+        print("Fine calculation ")
+
+
+book = Library()
+book.bookIssue()

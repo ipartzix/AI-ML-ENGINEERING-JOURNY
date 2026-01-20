@@ -54,10 +54,18 @@ class UserData(MemberID):  # Child class
 
     def __init__(self):
         super().__init__()  # initialize MemberID
+        self._MemberID__username = None
         self.__name = None
         self.__age = None
         self.__gender = None
         self.__phone = None
+
+    # _______________add user identity for specific book issue________________
+    def get_user_identity(self):
+        return {
+            "username": self._MemberID__username,
+            "name": self.__name
+        }
 
         # We OVERRIDE loginAcc to add the profile update logic
 
@@ -106,7 +114,6 @@ class UserData(MemberID):  # Child class
         print(f"Age    : {self.__age}")
         print(f"Gender : {self.__gender}")
         print(f"Phone  : {self.__phone}")
-
 
 user1 = UserData()
 user1.menu()

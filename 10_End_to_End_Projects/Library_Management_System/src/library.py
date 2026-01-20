@@ -37,38 +37,32 @@ class Library:
 
     # ______________book issue section_________________
 
-    def bookIssue(self, get_username, get_password, category):
-        if get_username():
-            get_password():
-            self.__username
-            print("Login Required ")
-            return None
-        else:
-            book_ID = input("\nEnter the book ID to issue this book: ")
-
-            for data in category["books"]:
-                if data["id"] == book_ID:
-                    issue_date = date.today()
-                    due_date = issue_date + timedelta(days=15)  # implement a dictionary for store issue record
-                    issue_record = {
-                        "__username": self.current_user["name"],
-                        "book_id": data["id"],
-                        "title": data["title"],
-                        "issue_date": issue_date,
-                        "due_date": due_date,
-                        "returned": False
-                    }
-                    print(f"\nBook Issued to {self.current_user['name']}")
-                    print(f"Due Date: {due_date}")
-
-                    return issue_record
-                return True
-            print("BOOK NOT FOUND")
-            return False
+    def bookIssue(self, category):
         if not self.current_user:
-            print("Login Required ")
+            print("Login Required")
             return None
 
+        book_ID = input("\nEnter the book ID to issue this book: ")
+        for data in category["books"]:
+            if data["id"] == book_ID:
+                issue_date = date.today()
+                due_date = issue_date + timedelta(days=15)  # implement a dictionary for store issue record
+
+                issue_record = {
+                    "username": self.current_user["username"],
+                    "name": self.current_user["name"],
+                    "book_id": data["id"],
+                    "title": data["title"],
+                    "issue_date": issue_date,
+                    "due_date": due_date,
+                    "returned": False
+                }
+                print(f"\nBook Issued to {self.current_user['name']}")
+                print(f"Due Date: {due_date}")
+                return issue_record
+
+        print("BOOK NOT FOUND")
+        return None
 
 
     # ________________book return section________________
@@ -79,7 +73,7 @@ class Library:
     def bookAvailable(self):
         print("Book availability check")
 
-    def ueAndFineCalculation(self):
+    def dueAndFineCalculation(self):
         print("Due and fine  calculation")
 
 

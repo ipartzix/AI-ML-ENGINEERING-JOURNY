@@ -64,20 +64,24 @@ class UserData(MemberID):  # Child class
         self.__gender = None
         self.__phone = None
 
-    def authenticate(self):
+    def get_name(self):
+        return self.__name
+
+    # ---------------- Authentication wrapper ----------------
+
+    def authenticate(self):  # Call menu() to login or create account
         success = self.menu()
-        if success:
-            return self.get_user_identity()
+        if success:  # If authentication is successful
+
+            return {
+                "username": self.get_username(),
+                "name": self.get_name()
+            }
+        # If authentication fails
+
         return None
 
-    # _______________add user identity for specific book issue________________
-    def get_user_identity(self):
-        return {
-            "username": self.get_username(),
-            "name": self.__name
-        }
-
-        # We OVERRIDE loginAcc to add the profile update logic
+    # ________ We OVERRIDE loginAcc to add the profile update logic_____
 
     def loginAcc(self):
         # 1. Call the parent's login logic first

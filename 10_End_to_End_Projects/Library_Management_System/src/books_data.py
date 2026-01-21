@@ -18,6 +18,9 @@ CS_BOOKS = [
     {"id": "CS110", "title": "Clean Architecture", "author": "Robert C. Martin"}
 ]
 
+# ______________________________AI & Machine Learning______________________________
+
+
 AI_BOOKS = [
     {"id": "AI201", "title": "AI: A Modern Approach", "author": "Russell"},
     {"id": "AI202", "title": "Pattern Recognition and ML", "author": "Bishop"},

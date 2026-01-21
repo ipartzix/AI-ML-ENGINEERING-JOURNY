@@ -128,6 +128,7 @@ GEN_BOOKS = [
     {"id": "GN1010", "title": "General Knowledge", "author": "Arihant"}
 ]
 
+# __________ when someone enter any key then i will call this according the key user entered ________________
 BOOKS_BY_CATEGORY = {  # 1,2,.....10 all are the category_key
     "1": {"name": "Computer Science", "books": CS_BOOKS},
     "2": {"name": "AI & Machine Learning", "books": AI_BOOKS},

@@ -6,7 +6,9 @@ class MemberID:  # parent class
         self.__username = "ipartzix"  #set a default username & password
         self.__password = "1234"  # password and username both are use as string
 
-    # --------------- make username and password private ---------------
+    # --------------- to get username and password ---------------
+
+
     def get_username(self):
         return self.__username
 

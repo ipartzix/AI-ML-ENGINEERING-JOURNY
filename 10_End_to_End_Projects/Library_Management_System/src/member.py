@@ -131,6 +131,8 @@ class UserData(MemberID):  # Child class
         print(f"Phone  : {self.__phone}")
 
     # ___________work as a bridge_____________
+
+    #  if someone call the get_user_identity then uit just return the all the data that assign in this method
     def get_user_identity(self):
         return {
             "username": self.get_username(),

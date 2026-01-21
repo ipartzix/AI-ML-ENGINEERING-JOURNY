@@ -70,7 +70,7 @@ class Library:
     def bookReturn(self):
         print("book return")
 
-    def bookAvailable(self):
+    def bookAvailableSearch(self):
         print("Book availability check")
 
     def dueAndFineCalculation(self):

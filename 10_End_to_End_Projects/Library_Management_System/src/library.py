@@ -6,8 +6,7 @@ from books_data import BOOKS_BY_CATEGORY
 
 class Library:
 
-    def __init__(self, categories=None):
-        self.categories = categories
+    def __init__(self):
         self.current_user = None
 
     # _______________________Display book categories___________________________

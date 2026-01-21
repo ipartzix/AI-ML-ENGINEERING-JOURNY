@@ -123,7 +123,9 @@ class UserData(MemberID):  # Child class
         self.__phone = input("Phone is:-")
         print("Successfully profile Updated ")
 
-        # ----- Show full profile -----def showProfile(self):
+        # ----- Show full profile -----
+
+    def showProfile(self):
         print("\n----- User Profile -----")
         print(f"Name   : {self.__name}")
         print(f"Age    : {self.__age}")

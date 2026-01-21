@@ -62,7 +62,7 @@ class UserData(MemberID):  # Child class
 
     def __init__(self):
         super().__init__()  # initialize MemberID
-        self.__name = None
+        self.__name = None  # create all attributes as  private and null in child class
         self.__age = None
         self.__gender = None
         self.__phone = None

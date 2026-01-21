@@ -113,6 +113,9 @@ SEC_BOOKS = [
     {"id": "CY710", "title": "Security Engineering", "author": "Ross Anderson"}
 ]
 
+# _________________________Electronics & Hardware_____________________________
+
+
 ELEC_BOOKS = [
     {"id": "EL801", "title": "Digital Electronics", "author": "Morris Mano"},
     {"id": "EL802", "title": "Microprocessors", "author": "Gaonkar"},

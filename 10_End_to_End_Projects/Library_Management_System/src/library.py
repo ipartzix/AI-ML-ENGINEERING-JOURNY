@@ -17,6 +17,9 @@ class Library:
     def show_categories(self):
         print("\n_______ Book Categories _______")
         for key, value in BOOKS_BY_CATEGORY.items():
+            # key → category identifier (e.g., "1", "2")
+            # value → dictionary containing category details
+
             print(f"key:-{key}. {value['name']}")
 
     # _____________________user select single domain_______________________

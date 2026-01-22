@@ -27,7 +27,7 @@ class Library:
     def show_books_by_category(self):  # update the method name from   userBook() --------> show_books_by_category()
 
         choice = input("\nEnter category key: ")
-        category = BOOKS_BY_CATEGORY.get(choice)
+        category = BOOKS_BY_CATEGORY.get(choice)  # Fetches category safely. .get() avoids KeyError
 
         # At first run not case for make code efficient it any error occur then direct code will end  else code run
         if not category:  ## Validate category input and exit early if invalid (guard clause)

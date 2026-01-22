@@ -24,6 +24,7 @@ class Library:
         choice = input("\nEnter category key: ")
         category = BOOKS_BY_CATEGORY.get(choice)
 
+        # At first run not case for make code efficient it any error occur then direct code will end  else code run
         if not category:
             print("Invalid category")
             return None

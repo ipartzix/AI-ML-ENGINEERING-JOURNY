@@ -24,9 +24,8 @@ class Library:
 
     # _____________________user select single domain_______________________
 
+    def show_books_by_category(self):  # update the method name from   userBook() --------> show_books_by_category()
 
-
-    def userBook(self):
         choice = input("\nEnter category key: ")
         category = BOOKS_BY_CATEGORY.get(choice)
 

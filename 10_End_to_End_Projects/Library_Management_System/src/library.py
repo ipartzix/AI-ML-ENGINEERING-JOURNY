@@ -6,8 +6,11 @@ from books_data import BOOKS_BY_CATEGORY
 
 class Library:
 
+    # ______________________Constructor________________________
+
+
     def __init__(self):
-        self.current_user = None
+        self.current_user = None  #current_user tracks the logged-in user  || None means no active session.
 
     # _______________________Display book categories___________________________
 

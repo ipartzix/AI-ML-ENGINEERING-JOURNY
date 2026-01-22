@@ -20,7 +20,8 @@ def main():
             print("\n" + "=" * 30)
             print(f"Logged in as: {library.current_user['name']}")
             print("1. Browse Book Categories")
-            print("2. Exit")
+            print("2. Return a book ")
+            print("3. Exit")
 
             choice = input("Select an option: ")
 
@@ -40,7 +41,8 @@ def main():
                         if record:
                             print(f"\nSUCCESS: '{record['title']}' must be returned by {record['due_date']}.")
 
-            elif choice == "2":
+
+            elif choice == "3":
                 print(f"Goodbye, {library.current_user['name']}!")
                 break
             else:

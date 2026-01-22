@@ -27,7 +27,6 @@ def main():
 
             # _____________________book selection section____________________________
 
-
             if choice == "1":
                 # Display all available categories from books_data.py
                 library.show_categories()

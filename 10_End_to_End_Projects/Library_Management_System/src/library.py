@@ -46,7 +46,7 @@ class Library:
     # ______________book issue section_________________
 
     def bookIssue(self, category):
-        if not self.current_user:
+        if not self.current_user:  # must need to log in to continue the program
             print("Login Required")
             return None
 

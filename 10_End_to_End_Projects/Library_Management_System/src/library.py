@@ -25,7 +25,8 @@ class Library:
         category = BOOKS_BY_CATEGORY.get(choice)
 
         # At first run not case for make code efficient it any error occur then direct code will end  else code run
-        if not category:
+        if not category:  ## Validate category input and exit early if invalid (guard clause)
+
             print("Invalid category")
             return None
 

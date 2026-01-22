@@ -32,6 +32,8 @@ class Library:
         # At first run not case for make code efficient it any error occur then direct code will end  else code run
         if not category:  ## Validate category input and exit early if invalid (guard clause)
 
+            # This prevents unnecessary execution when input is invalid.
+
             print("Invalid category")
             return None
 
@@ -39,7 +41,7 @@ class Library:
         for data in category["books"]:
             Book(data["id"], data["title"], data["author"]).display()
 
-        return category
+        return category  # return the key value the user inputted in previous
 
     # ______________book issue section_________________
 

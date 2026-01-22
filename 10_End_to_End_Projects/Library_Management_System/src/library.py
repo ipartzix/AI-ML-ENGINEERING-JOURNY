@@ -75,14 +75,29 @@ class Library:
 
     # ________________book return section________________
 
-    def bookReturn(self):
-        print("book return")
+    def bookReturn(self, category):
+        if not self.current_user:  # must need to log in to continue the program
+            print("Login Required")
+            return None
+
+        book_ID = input("\nEnter the book ID to Return : ")
+        for data in category["books"]:
+            if data["id"] == book_ID:
+                print(f"\nBook '{data['title']}' returned by {self.current_user['name']}")
+
+                return_record = {
+                    "username": self.current_user["username"],
+                    "name": self.current_user["name"],
+                    "book_id": data["id"],
+                    "title": data["title"],
+                    "returned": True
+                }
+                return return_record
+        print("NO DATA FOUND ABOUT THIS BOOK ")
+        return None
 
     def bookAvailableSearch(self):
-        print("Book availability check")
+        print("Book availability check\n Feature coming soon")
 
     def dueAndFineCalculation(self):
-        print("Due and fine  calculation")
-
-
-
+        print("Due and fine  calculation\n Feature coming soon")

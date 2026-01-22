@@ -29,7 +29,7 @@ def main():
                 library.show_categories()
 
                 # Let user pick a category and view its books
-                category = library.userBook()
+                category = library.show_books_by_category()  # update the method name from   userBook() --------> show_books_by_category()
 
                 if category:
                     # Ask if they want to issue a book from the displayed list

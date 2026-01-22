@@ -42,6 +42,10 @@ def main():
                             print(f"\nSUCCESS: '{record['title']}' must be returned by {record['due_date']}.")
 
 
+            elif choice == "2":
+                library.bookReturn()  # no category needed
+
+
             elif choice == "3":
                 print(f"Goodbye, {library.current_user['name']}!")
                 break

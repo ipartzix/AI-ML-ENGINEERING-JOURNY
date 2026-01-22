@@ -49,7 +49,7 @@ def main():
             elif choice == "2":
                 library.bookReturn()  # no category needed
 
-
+            # ___________________Loop exit point_______________________
             elif choice == "3":
                 print(f"Goodbye, {library.current_user['name']}!")
                 break

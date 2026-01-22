@@ -8,6 +8,7 @@ transaction workflows. This project demonstrates clean code principles and effic
 * `book.py`: Defines the `Book` class (attributes like ISBN, Title, Author).
 * `member.py`: Defines the `Member` class and borrowing limits.
 * `library.py`: The core engine handling the logic for issuing, returning, and searching books.
+* `books_data.py`: The central inventory (Dictionary-based Data Store).
 * `main.py`: The entry point for the command-line interface (CLI).
 
 ## ✨ Features

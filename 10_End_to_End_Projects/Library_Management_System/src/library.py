@@ -76,12 +76,17 @@ class Library:
     # ________________book return section________________
 
     def bookReturn(self):
-        if not self.current_user:  # must need to log in to continue the program
+        if not self.current_user:
             print("Login Required")
             return None
 
-        book_ID = input("\nEnter the book ID to Return : ")
-        print(f"\nBook '{data['title']}' returned by {self.current_user['name']}")
+        # Ask user for book ID directly
+        book_ID = input("\nEnter the book ID to Return: ")
+
+        # Print confirmation using the entered book ID
+        print(f"Book '{book_ID}' returned by {self.current_user['name']}")
+
+        # Optional: return a simple record
         return {
             "username": self.current_user["username"],
             "name": self.current_user["name"],

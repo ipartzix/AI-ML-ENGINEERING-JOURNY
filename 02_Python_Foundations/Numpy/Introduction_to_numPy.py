@@ -40,5 +40,5 @@ print(f"1-D Array ------> [ 1 2 3 4 ]\n"
       f"3-D Array ------> [[[ 1 2 3 4]]]\n"
       f"Higher Dimensional Arrays-----> increase []\n")
 
-print("print or know the Dimensions of Array ")
+print("print or know the Dimensions of Array w use ' .ndim ' ")
 print(y.ndim)

@@ -34,8 +34,11 @@ for i in range(1, 5):
     l.append(int1)
 print(np.array(l))
 
-print("-----------Dimensions of Arra------------")
+print("-----------Dimensions of Array------------")
 print(f"1-D Array ------> [ 1 2 3 4 ]\n"
       f"2-D Array ------> [[ 1 2 3 4 ]]\n"
       f"3-D Array ------> [[[ 1 2 3 4]]]\n"
       f"Higher Dimensional Arrays-----> increase []\n")
+
+print("print or know the Dimensions of Array ")
+print(y.ndim)

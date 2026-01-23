@@ -16,3 +16,13 @@ print(type(lis_t))  # <class 'list'>
 # %%timeit [j**4 for j in range(1,9)] # it is use to see full code execution time
 
 print("For create an NumPy array we use the function np.array()")
+x = [1, 2, 3, 4, 5, 6, 7]
+y = np.array(x)
+print(y)
+
+# This is the 1st method to create an array
+
+p = np.array([4, 6, 7, 8, 9])
+print(p)
+
+# This is another method to create an array

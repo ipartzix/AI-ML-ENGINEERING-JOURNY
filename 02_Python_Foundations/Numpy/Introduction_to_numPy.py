@@ -57,3 +57,9 @@ print("====================3D Array creation===================")
 ar3 = np.array([[[1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]]])
 print(ar3)
 print(ar3.ndim)
+
+print("====================nD Array creation===================")
+arn = np.array([1, 2, 3, 4],
+               ndmin=10)  # ndmin is a shortcut to define the dimension of array without giving the 3rd bracket "[]"
+print(arn)
+print(arn.ndim)

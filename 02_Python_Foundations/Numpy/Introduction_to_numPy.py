@@ -42,3 +42,18 @@ print(f"1-D Array ------> [ 1 2 3 4 ]\n"
 
 print("print or know the Dimensions of Array w use ' .ndim ' ")
 print(y.ndim)
+
+print("====================1D Array creation===================")
+ar1 = np.array([1, 2, 3, 4])
+print(ar1)
+print(ar1.ndim)
+
+print("====================2D Array creation===================")
+
+ar2 = np.array([[1, 2, 3, 4], [1, 2, 3, 4]])  # create a 2D array
+print(ar2)
+print(ar2.ndim)
+print("====================3D Array creation===================")
+ar3 = np.array([[[1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]]])
+print(ar3)
+print(ar3.ndim)

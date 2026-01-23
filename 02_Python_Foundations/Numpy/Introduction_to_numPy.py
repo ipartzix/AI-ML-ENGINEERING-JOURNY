@@ -33,3 +33,9 @@ for i in range(1, 5):
     int1 = int(input("Enter num:-"))
     l.append(int1)
 print(np.array(l))
+
+print("-----------Dimensions of Arra------------")
+print(f"1-D Array ------> [ 1 2 3 4 ]\n"
+      f"2-D Array ------> [[ 1 2 3 4 ]]\n"
+      f"3-D Array ------> [[[ 1 2 3 4]]]\n"
+      f"Higher Dimensional Arrays-----> increase []\n")

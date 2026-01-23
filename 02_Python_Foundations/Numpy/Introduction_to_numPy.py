@@ -26,3 +26,10 @@ p = np.array([4, 6, 7, 8, 9])
 print(p)
 
 # This is another method to create an array
+
+print("========User input array:=========")
+l = []
+for i in range(1, 5):
+    int1 = int(input("Enter num:-"))
+    l.append(int1)
+print(np.array(l))

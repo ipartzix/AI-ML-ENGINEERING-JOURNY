@@ -14,7 +14,7 @@ print(arr3)
 
 # randn() =the function is used to generate a random value close to zero
 # it may return positive or negative number as well
-print("Use od randn() function ")
+print("Use of randn() function ")
 arrn = np.random.randn(5)
 print(arrn)
 
@@ -24,3 +24,8 @@ print("Use of ranf() function  ")
 
 arrf = np.random.ranf(4)
 print(arrf)
+
+print("Use of randint() function ")
+# randint() = the function is used to generatr a random number between a given range
+arr_range = np.random.randint(2, 39, 4)
+print(arr_range)

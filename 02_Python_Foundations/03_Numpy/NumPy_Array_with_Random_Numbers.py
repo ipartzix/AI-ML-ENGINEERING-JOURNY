@@ -17,3 +17,10 @@ print(arr3)
 print("Use od randn() function ")
 arrn = np.random.randn(5)
 print(arrn)
+
+print("Use of ranf() function  ")
+# ranf()  = the function for doing random sampling in numpy.it returns an
+# array of specified shape and files it with random float in the  half-open interval [0.0 ,1.0 )
+
+arrf = np.random.ranf(4)
+print(arrf)

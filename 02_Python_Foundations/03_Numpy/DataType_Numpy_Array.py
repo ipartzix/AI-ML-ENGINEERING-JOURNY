@@ -45,3 +45,6 @@ print("Data type :", var2.dtype)
 
 var3 = np.array(["p", "3", "oo"])
 print("Data type :", var3.dtype)
+
+var4 = np.array(["p", "3", "oo", 5, 9])
+print("Data type :", var4.dtype)

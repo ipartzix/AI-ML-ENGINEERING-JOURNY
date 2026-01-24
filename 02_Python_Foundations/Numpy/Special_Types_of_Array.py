@@ -18,3 +18,8 @@ print("_________________________________________________________________________
 print("Empty array ")
 ar_empty = np.empty(4)  # .empty is the keyword to do that kind of operation
 print(ar_empty)
+
+print("___________________________________________________________________________")
+print("An Array with a range element ")
+arr_range = np.arange(4)  # to create a continuous order of number like 0 1 2 3 4 .... we use this arange function
+print(arr_range)

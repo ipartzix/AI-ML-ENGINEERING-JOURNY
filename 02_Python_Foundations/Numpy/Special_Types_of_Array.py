@@ -24,8 +24,13 @@ print("An Array with a range element ")
 arr_range = np.arange(4)  # to create a continuous order of number like 0 1 2 3 4 .... we use this arange function
 print(arr_range)
 
-print("____________________________________________________________________________")
+print("___________________________________________________________________________")
 print("Array diagonal element filled with 1's")
 print("Diagonal")
 ar_dia = np.eye(5)  # eye is a function for printing identity matrix
 print(ar_dia)
+
+print("____________________________________________________________________________")
+print("Create an Array with values that are spaced linearly in a specified interval")
+arr_lin = np.linspace(0, 20, num=5)  # start , stop ,gape || linespace function do this word
+print(arr_lin)

@@ -3,7 +3,7 @@ import numpy as np
 # Standard alias for Numerical Python; used for high-performance vector/matrix operations
 # and as the foundation for most AI-ML libraries (Scikit-learn, TensorFlow, etc.).
 
-print("Numpy Learning ")
+print("03_Numpy Learning ")
 
 lis_t = [1, 2, 3, 4]
 x = np.array([1, 2, 3, 4])

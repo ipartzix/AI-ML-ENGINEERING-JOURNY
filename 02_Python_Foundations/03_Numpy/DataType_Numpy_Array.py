@@ -34,3 +34,11 @@
 # Date and time types:
 # datetime64
 # timedelta64
+import numpy as np
+
+print("Data type")
+var = np.array([1, 2, 3, 4])
+print("Data type :", var.dtype)
+
+var2 = np.array([1.4, 5.6, 5.0, 7.1])
+print("Data type :", var2.dtype)

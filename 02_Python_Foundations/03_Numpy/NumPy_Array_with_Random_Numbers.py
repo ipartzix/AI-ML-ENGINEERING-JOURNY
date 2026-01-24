@@ -11,3 +11,9 @@ print(arr1)
 
 arr3 = np.random.rand(2, 4, 5)
 print(arr3)
+
+# randn() =the function is used to generate a random value close to zero
+# it may return positive or negative number as well
+print("Use od randn() function ")
+arrn = np.random.randn(5)
+print(arrn)

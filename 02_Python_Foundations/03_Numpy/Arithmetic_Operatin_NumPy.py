@@ -58,3 +58,6 @@ v2 = np.array([[1, 2, 3, 4], [1, 3, 5, 6]])
 
 a = v1 + v2
 print(a)
+
+r = np.reciprocal(v1)
+print(r)

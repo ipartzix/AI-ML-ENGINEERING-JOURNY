@@ -61,3 +61,7 @@ print(a)
 
 r = np.reciprocal(v1)
 print(r)
+
+arr_int = np.array([1, 2, 3, 4])
+arr_float = np.array([1.0, 2.0, 3.0, 4.0])
+print(np.reciprocal(arr_int))  # [1 0 0 0] print(np.reciprocal(arr_float)) # [1. 0.5 0.33333333 0.25]

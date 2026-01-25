@@ -48,3 +48,16 @@ print("Data type :", var3.dtype)
 
 var4 = np.array(["p", "3", "oo", 5, 9])
 print("Data type :", var4.dtype)
+
+print("_________NumPy data type conversion_________")
+x = np.array([1, 3, 4, 5, 67], dtype=np.int8)
+print(x)
+print("data type: ", x.dtype)
+# At first, it becomes int64 now it int8 because we do type conversion
+# for doing type conversion  do ----> dtype =np.targeted datatype ( dtype=np.int8 )
+
+print("_________shortcut NumPy data type conversion_________")
+x1 = np.array([1, 3, 4, 5, 67], dtype="f")
+print(x1)
+print("data type: ", x1.dtype)
+# This is the shortcut method to convert one datatype to another data type

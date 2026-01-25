@@ -29,6 +29,7 @@ print(varmod)
 print("power")
 var_power = var1 ** var2
 print(var_power)
+
 print("Using function")
 
 print("add")
@@ -50,3 +51,10 @@ print(vardiv1)
 print("modulo")
 varmod1 = np.mod(var1, var2)
 print(varmod1)
+
+print("2D array ")
+v1 = np.array([[1, 2, 3, 4], [1, 3, 5, 6]])
+v2 = np.array([[1, 2, 3, 4], [1, 3, 5, 6]])
+
+a = v1 + v2
+print(a)

@@ -26,3 +26,25 @@ print(vardiv)
 print("modulo")
 varmod = var1 % var2
 print(varmod)
+
+print("Using function")
+
+print("add")
+var_add1 = np.add(var1, var2)
+print(var_add1)
+
+print("sub")
+varsub1 = np.subtract(var1, var2)
+print(varsub1)
+
+print("mul")
+varmal1 = np.multiply(var1, var2)
+print(varmal1)
+
+print("div")
+vardiv1 = np.divide(var1, var2)
+print(vardiv1)
+
+print("modulo")
+varmod1 = np.mod(var1, var2)
+print(varmod1)

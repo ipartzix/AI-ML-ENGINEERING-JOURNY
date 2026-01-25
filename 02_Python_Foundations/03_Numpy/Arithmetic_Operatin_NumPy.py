@@ -26,7 +26,9 @@ print(vardiv)
 print("modulo")
 varmod = var1 % var2
 print(varmod)
-
+print("power")
+var_power = var1 ** var2
+print(var_power)
 print("Using function")
 
 print("add")

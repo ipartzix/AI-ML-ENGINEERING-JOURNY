@@ -11,3 +11,10 @@ print("Individual data iteration ")
 for k in v:
     for l in k:
         print(l)
+
+d = np.array([[[1, 2, 3], [1, 2, 3], [1, 2, 3]]])
+print(d)
+for i in d:
+    for j in i:
+        for k in j:
+            print(k)

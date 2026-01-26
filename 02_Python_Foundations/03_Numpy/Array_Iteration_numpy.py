@@ -18,3 +18,8 @@ for i in d:
     for j in i:
         for k in j:
             print(k)
+print("Array  data iteration by function  ")
+cd = np.array([[[1, 2, 3], [1, 2, 3], [1, 2, 3]]])
+
+for i in np.nditer(cd):  # .nditer is a function to do the iteration
+    print(i)

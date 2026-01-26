@@ -28,3 +28,7 @@ print("2 to 5:", s[1:5])  # index 1 to 4
 print("2 to ending:", s[1:])  # index 1 to end
 print("start to 4 ", s[:5])
 print("step", s[::2])
+
+print("2D array slicing ")
+s2 = np.array([[1, 2, 3, 4, 5], [9, 7, 6, 5, 4]])
+print("2D array slicing:", s2[1, 2:])

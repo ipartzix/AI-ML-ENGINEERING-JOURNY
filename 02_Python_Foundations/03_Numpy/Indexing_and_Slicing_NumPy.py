@@ -21,5 +21,8 @@ print(z[0, 1, 2])
 
 print("SLICING")
 s = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])
-# slicing process done with -------------> | start : stop : step |
-print(s[1:5])
+
+# slicing format → start : stop : step (index-based)
+
+print("2 to 5:", s[1:5])  # index 1 to 4
+print("2 to ending:", s[1:])  # index 1 to end

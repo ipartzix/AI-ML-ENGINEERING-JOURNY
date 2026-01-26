@@ -7,3 +7,7 @@ for i in x:
 v = np.array([[1, 2, 3, 4], [1, 2, 3, 4]])
 for j in v:
     print(j)
+print("Individual data iteration ")
+for k in v:
+    for l in k:
+        print(l)

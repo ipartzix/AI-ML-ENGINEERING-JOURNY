@@ -23,3 +23,9 @@ cd = np.array([[[1, 2, 3], [1, 2, 3], [1, 2, 3]]])
 
 for i in np.nditer(cd):  # .nditer is a function to do the iteration
     print(i)
+print()
+
+# for i in np.nditer(cd,flags=['buffered '],op_dtypes=["s"]):
+#     print(i)
+for i in np.nditer(cd, flags=['buffered'], op_dtypes=['S']):
+    print(i)

@@ -29,3 +29,7 @@ print()
 #     print(i)
 for i in np.nditer(cd, flags=['buffered'], op_dtypes=['S']):
     print(i)
+print("value with index ")
+
+for i, d in np.ndenumerate(cd):  # .ndenumerate is a function to do the iteration with index
+    print(i, d)

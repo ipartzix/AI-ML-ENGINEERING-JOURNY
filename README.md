@@ -1,9 +1,17 @@
 # AI-ML-ENGINEERING-JOURNEY
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ashishpatel26/ML-Workflow/master/images/ml_workflow.png"
-       width="650"
-       alt="Machine Learning Engineering Workflow"/>
+  <img src="https://img.shields.io/badge/00_Orientation-Purple" alt="Orientation">
+  <img src="https://img.shields.io/badge/01_Mathematics-Blue" alt="Mathematics">
+  <img src="https://img.shields.io/badge/02_Python_Foundations-Green" alt="Python">
+  <img src="https://img.shields.io/badge/03_Machine_Learning-Orange" alt="ML">
+  <img src="https://img.shields.io/badge/04_Deep_Learning-Red" alt="DL">
+  <img src="https://img.shields.io/badge/05_Computer_Vision-Cyan" alt="CV">
+  <img src="https://img.shields.io/badge/06_NLP-Pink" alt="NLP">
+  <img src="https://img.shields.io/badge/07_LLMs-LightBlue" alt="LLM">
+  <img src="https://img.shields.io/badge/08_MLOps-Purple" alt="MLOps">
+  <img src="https://img.shields.io/badge/09_Research-Red" alt="Research">
+  <img src="https://img.shields.io/badge/10_Projects-Green" alt="Projects">
 </p>
 
 A structured, end-to-end **AI/ML Engineering journey** covering mathematics, machine learning, deep learning, large
@@ -42,8 +50,6 @@ The objective of this repository is to:
 - **MLOps** — experiment tracking, deployment, CI/CD
 - **Research Implementations** — reproducing influential AI papers
 - **End-to-End Projects** — complete ML systems from data to deployment
-
-Detailed explanations and implementations live inside individual folders.
 
 ---
 

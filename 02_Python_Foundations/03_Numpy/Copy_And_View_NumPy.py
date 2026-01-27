@@ -10,3 +10,4 @@ vi = x.view()
 print(vi)
 print(".view() in NumPy creates a new array object"
       " that shares the same data as the original array.")
+print(" If i change data in main  variable copy will not change but view can change ")

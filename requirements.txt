@@ -18,8 +18,7 @@ ai-ml-engineering-journey/
 │     ├── 09_svd.ipynb
 │     ├── 10_pseudoinverse.ipynb
 │     ├── 11_pca_from_scratch.ipynb
-│     ├── 12_rank_independence.ipynb
-
+│
 │ ├── Calculus/ # Purpose: Core calculus needed for ML, DL, and optimization.
 │   ├── 01_derivatives.ipynb
 │   ├── 02_partial_derivatives.ipynb

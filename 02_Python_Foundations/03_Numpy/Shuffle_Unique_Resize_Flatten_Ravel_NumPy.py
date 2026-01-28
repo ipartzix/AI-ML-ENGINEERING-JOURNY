@@ -9,7 +9,11 @@ print("Shuffle don't have return type , it just return the original variable ")
 print("Unique")
 new_arr = np.array([1, 2, 3, 4, 5, 4, 3, 2])
 x = np.unique(new_arr, return_index=True, return_counts=True)
-# return_index= True is print the index value of unique element
-# return_counters =True it print the counter of it
+# np.unique() returns unique elements from the array
+# return_index=True  → returns the index of the first occurrence of each unique element
+# return_counts=True → returns how many times each unique element appears
 print(x)
 print("unique function print unique element that come once in array ")
+# NOTE:
+# np.unique() does NOT return elements that appear only once by default.
+# It returns ALL unique elements (removes duplicates).

@@ -17,3 +17,8 @@ print("unique function print unique element that come once in array ")
 # NOTE:
 # np.unique() does NOT return elements that appear only once by default.
 # It returns ALL unique elements (removes duplicates).
+
+print("Resize")
+arr2 = np.array([1, 3, 2, 4, 5, 6, 7, 23])
+r = np.resize(arr2, (2, 5))  # give the targeted shape
+print(r)

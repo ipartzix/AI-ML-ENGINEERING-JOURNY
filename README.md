@@ -88,3 +88,53 @@ Living notes maintained alongside implementations, focusing on:
 ---
 
 *This repository represents ongoing work toward becoming a strong AI/ML Engineer.*
+
+---
+
+## January Progress (Foundations Completed)
+
+**Focus:** Core programming and mathematical foundations for AI/ML engineering.
+
+### Python Foundations
+
+- Completed Python from fundamentals to advanced concepts
+- Strong command over:
+    - Core data types and control flow
+    - Functions and modular programming
+    - Object-Oriented Programming (OOP)
+
+### Project: Library Management System (Python OOP)
+
+- Designed and implemented a complete Library Management System
+- Applied:
+    - Class-based architecture
+    - Encapsulation and abstraction
+    - Real-world entity modeling
+- Emphasis on clean structure and engineering discipline
+
+### Mathematics for Machine Learning
+
+- **Calculus**
+    - Core concepts required for optimization and gradient-based learning
+- **Linear Algebra**
+    - Vectors and matrices
+    - Matrix operations
+    - Determinants and transformations
+    - Mathematical intuition behind ML computations
+
+### Numerical Computing
+
+- **NumPy**
+    - Array and matrix manipulation
+    - Vectorized operations
+    - Broadcasting
+    - Statistical computations
+    - Real-life data processing use cases
+
+### Outcome
+
+- Built a strong mathematical and numerical foundation for Machine Learning
+- Improved ability to reason about ML algorithms beyond library usage
+- Ready to transition from foundations to Machine Learning implementation
+
+*January was dedicated to depth-first fundamentals that future ML, DL, and systems work will rely on.*

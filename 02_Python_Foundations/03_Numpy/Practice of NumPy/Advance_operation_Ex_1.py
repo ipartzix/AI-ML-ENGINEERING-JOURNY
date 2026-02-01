@@ -25,3 +25,7 @@ print(min_sales)
 # Maximum sales per year
 max_sales = np.max(sales_data[:, 1:], axis=0)
 print(max_sales)
+
+# Average sales per restautant
+avg_sales = np.mean(sales_data[:, 1:], axis=1)
+print(avg_sales)

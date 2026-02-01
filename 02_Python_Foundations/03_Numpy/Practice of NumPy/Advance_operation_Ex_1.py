@@ -15,3 +15,5 @@ print("\n Sample data for 1st 3 restau: ", sales_data[0:3])
 
 print("Total sales per year ")
 print(np.sum(sales_data, axis=0))
+yearly_total = np.sum(sales_data[:, 1:], axis=0)
+print(yearly_total)

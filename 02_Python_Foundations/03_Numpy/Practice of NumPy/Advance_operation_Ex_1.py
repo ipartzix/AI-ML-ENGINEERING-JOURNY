@@ -29,3 +29,14 @@ print(max_sales)
 # Average sales per restautant
 avg_sales = np.mean(sales_data[:, 1:], axis=1)
 print(avg_sales)
+
+cumsum = np.cumsum(sales_data[:, 1:], axis=1)
+print(cumsum)
+
+plt.figure(figsize=(8, 6))
+plt.plot(np.mean(cumsum, axis=0))
+plt.title("Average cumulative sales accross all restaurant ")
+plt.xlabel("Years")
+plt.ylabel("Sales")
+plt.grid(True)
+plt.show()

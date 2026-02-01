@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import numpy as np
 
 # Data structure: [restaurant_id, 2021, 2022, 2023, 2024]

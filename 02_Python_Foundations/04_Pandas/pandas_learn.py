@@ -32,3 +32,6 @@ print(df)
 branch_avg = df.groupby("Branch")["Marks"].mean()
 print("\nAverage Marks by Branch:")
 print(branch_avg)
+
+# Save to CSV
+df.to_csv("student_results.csv", index=False)

@@ -18,3 +18,6 @@ print(df)
 # Check missing values
 print("\nMissing values:")
 print(df.isnull().sum())
+
+# Fill missing salary with mean salary
+df["Salary"].fillna(df["Salary"].mean(), inplace=True)

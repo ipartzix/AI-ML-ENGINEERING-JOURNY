@@ -21,3 +21,10 @@ print(df.isnull().sum())
 
 # Fill missing salary with mean salary
 df["Salary"].fillna(df["Salary"].mean(), inplace=True)
+
+# Add salary category
+df["Salary_Level"] = pd.cut(
+    df["Salary"],
+    bins=[0, 50000, 60000, 100000],
+    labels=["Low", "Medium", "High"]
+)

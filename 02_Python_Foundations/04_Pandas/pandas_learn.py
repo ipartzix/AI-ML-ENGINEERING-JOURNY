@@ -27,3 +27,8 @@ df["Result"] = df["Marks"].apply(lambda x: "Pass" if x >= 60 else "Fail")
 
 print("\nDataFrame with Result column:")
 print(df)
+
+# Group by Branch and calculate average marks
+branch_avg = df.groupby("Branch")["Marks"].mean()
+print("\nAverage Marks by Branch:")
+print(branch_avg)

@@ -28,3 +28,7 @@ df["Salary_Level"] = pd.cut(
     bins=[0, 50000, 60000, 100000],
     labels=["Low", "Medium", "High"]
 )
+# Department-wise analysis
+dept_salary = df.groupby("Department")["Salary"].agg(["mean", "max", "min"])
+print("\nDepartment-wise Salary Analysis:")
+print(dept_salary)

@@ -32,3 +32,9 @@ df["Salary_Level"] = pd.cut(
 dept_salary = df.groupby("Department")["Salary"].agg(["mean", "max", "min"])
 print("\nDepartment-wise Salary Analysis:")
 print(dept_salary)
+
+# Sort by experience
+df_sorted = df.sort_values(by="Experience_Years", ascending=False)
+
+print("\nSorted by Experience:")
+print(df_sorted)

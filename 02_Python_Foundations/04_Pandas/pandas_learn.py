@@ -16,3 +16,8 @@ print(df)
 # Basic statistics
 print("\nStatistics:")
 print(df["Marks"].describe())
+
+# Filter students with marks >= 75
+high_scorers = df[df["Marks"] >= 75]
+print("\nStudents with Marks >= 75:")
+print(high_scorers)

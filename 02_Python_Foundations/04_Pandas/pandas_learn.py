@@ -12,3 +12,7 @@ df = pd.DataFrame(data)
 # Display DataFrame
 print("Original DataFrame:")
 print(df)
+
+# Basic statistics
+print("\nStatistics:")
+print(df["Marks"].describe())

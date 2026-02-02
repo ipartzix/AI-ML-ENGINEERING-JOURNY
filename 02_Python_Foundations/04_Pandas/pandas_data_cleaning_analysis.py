@@ -14,3 +14,7 @@ df = pd.DataFrame(data)
 
 print("Original Data:")
 print(df)
+
+# Check missing values
+print("\nMissing values:")
+print(df.isnull().sum())

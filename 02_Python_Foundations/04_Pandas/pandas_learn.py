@@ -21,3 +21,9 @@ print(df["Marks"].describe())
 high_scorers = df[df["Marks"] >= 75]
 print("\nStudents with Marks >= 75:")
 print(high_scorers)
+
+# Add a new column (Pass/Fail)
+df["Result"] = df["Marks"].apply(lambda x: "Pass" if x >= 60 else "Fail")
+
+print("\nDataFrame with Result column:")
+print(df)

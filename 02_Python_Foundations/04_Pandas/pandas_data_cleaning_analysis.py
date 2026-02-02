@@ -38,3 +38,6 @@ df_sorted = df.sort_values(by="Experience_Years", ascending=False)
 
 print("\nSorted by Experience:")
 print(df_sorted)
+
+# Save cleaned data
+df.to_csv("employee_cleaned_data.csv", index=False)

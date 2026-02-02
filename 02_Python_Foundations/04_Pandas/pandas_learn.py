@@ -8,3 +8,7 @@ data = {
     "Branch": ["CSE", "CSE", "ECE", "CSE", "ME"]
 }
 df = pd.DataFrame(data)
+
+# Display DataFrame
+print("Original DataFrame:")
+print(df)

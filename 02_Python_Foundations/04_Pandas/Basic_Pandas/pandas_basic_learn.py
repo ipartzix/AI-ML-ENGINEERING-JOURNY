@@ -33,4 +33,23 @@ Each key becomes a column.
 
 Each list element aligns row-wise by index.
 
+| Index | Name   | age | Marks |
+| ----- | ------ | --- | ----- |
+| 0     | Partha | 21  | 90    |
+| 1     | Pritam | 15  | 99    |
+| 2     | Argha  | 16  | 80    |
+
+
+Index → Row identifier (0, 1, 2)
+
+Columns → Name, age, Marks
+
+Rows → Individual student records
 """
+print()
+print("index:---------")
+print(df.index)
+print("columns:-------")
+print(df.columns)
+print("shape----------")
+print(df.shape)

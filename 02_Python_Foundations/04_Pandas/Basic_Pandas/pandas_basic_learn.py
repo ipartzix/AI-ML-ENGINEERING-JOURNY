@@ -14,13 +14,13 @@ print(s)
 dtype: int64
 
 """
-print("2. 2-D data")
+print("2. 2-D data")  # All lists must have the same length (here, length = 3), otherwise Pandas will throw an error
 data = {
     "Name": ["Partha", "Pritam", "Argha"],
     "age": [21, 15, 16],
     "Marks": [90, 99, 80]
 }
-df = pd.DataFrame(data)
+df = pd.DataFrame(data)  # converts the dictionary into a tabular structure.
 print(df)
 """
 2. 2-D data
@@ -28,5 +28,9 @@ print(df)
 0  Partha   21     90
 1  Pritam   15     99
 2   Argha   16     80
+
+Each key becomes a column.
+
+Each list element aligns row-wise by index.
 
 """

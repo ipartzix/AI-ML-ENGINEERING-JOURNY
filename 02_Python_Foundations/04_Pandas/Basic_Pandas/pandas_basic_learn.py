@@ -67,6 +67,7 @@ print("---info---")
 df.info()
 print("---describe---")
 df.describe()
+# Generates statistics only for numeric columns
 """
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 3 entries, 0 to 2

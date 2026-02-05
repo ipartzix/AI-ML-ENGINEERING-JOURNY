@@ -67,6 +67,8 @@ print(df.head())
 
 print("---tail---")
 print(df.tail())
+# Shows last 5 rows
+
 
 print("---info---")
 df.info()

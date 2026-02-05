@@ -59,6 +59,11 @@ print("------------------------view data-------------------------")
 
 print("---head---")
 print(df.head())
+# head()
+
+# Shows first 5 rows by default
+#
+# Useful for previewing large datasets
 
 print("---tail---")
 print(df.tail())

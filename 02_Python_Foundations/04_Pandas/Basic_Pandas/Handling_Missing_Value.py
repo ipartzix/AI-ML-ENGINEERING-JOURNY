@@ -13,3 +13,5 @@ print(df.isnull())
 print()
 
 print(df.isnull().sum())
+print(f"use isnull() to detect missing values and"
+      f" isnull().sum() to quantify them per column before preprocessing.")

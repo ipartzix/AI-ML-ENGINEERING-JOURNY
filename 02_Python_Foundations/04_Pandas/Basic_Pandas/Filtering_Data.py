@@ -9,8 +9,12 @@ df = pd.DataFrame(data)
 print(df)
 print()
 
+print("Single condition data filtering")
 df = df[df["Marks"] > 70]  # True  → keep row
 # False → drop row
 
 print(df)
 # Now pandas uses that True / False mask to filter rows.
+
+
+print("Multoicondition data filtering ")

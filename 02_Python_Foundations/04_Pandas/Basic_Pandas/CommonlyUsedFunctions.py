@@ -18,3 +18,6 @@ print(df.describe())
 
 print("____df.shape Size (rows, columns)_____")
 print(df.shape)
+
+print("______df.columns Column names List-like object of column labels______")
+print(df.columns)

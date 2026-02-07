@@ -12,3 +12,6 @@ print(df.head(2))
 
 print("____df.info() Data summary Data types, non-null counts, memory usage___")
 print(df.info())
+
+print("____df.describe() Statistics Count, mean, std, min, quartiles, max____")
+print(df.describe())

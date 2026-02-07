@@ -1,0 +1,11 @@
+import pandas as pd
+
+data = {
+    "Name": ["Partha", "Pritam", "Argha"],
+    "Age": [21, 15, 16],
+    "Marks": [90, 99, 80]
+}
+df = pd.DataFrame(data)
+print(df)
+print("____df.head(n) View top rows First n rows (data preview) count start f4rom 1 not 0____")
+print(df.head(2))

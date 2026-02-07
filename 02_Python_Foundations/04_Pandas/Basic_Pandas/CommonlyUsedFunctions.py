@@ -21,3 +21,6 @@ print(df.shape)
 
 print("______df.columns Column names List-like object of column labels______")
 print(df.columns)
+
+print("_____df.isnull() Missing data Boolean mask (True = missing)______")
+print(df.isnull())

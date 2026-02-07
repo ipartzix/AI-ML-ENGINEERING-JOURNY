@@ -17,4 +17,4 @@ print("____df.describe() Statistics Count, mean, std, min, quartiles, max____")
 print(df.describe())
 
 print("____df.shape Size (rows, columns)_____")
-print(df.shape())
+print(df.shape)

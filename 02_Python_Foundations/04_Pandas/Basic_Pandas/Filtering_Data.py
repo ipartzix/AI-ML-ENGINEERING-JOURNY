@@ -18,3 +18,6 @@ print(df)
 
 
 print("Multoicondition data filtering ")
+
+df = df[(df["Marks"] > 80) & (df["Age"] > 10)]
+print(df)

@@ -1,9 +1,0 @@
-library_management_system/
-├── src/
-│   ├── book.py
-│   ├── books_data.py
-│   ├── member.py
-│   ├── library.py
-│   └── main.py
-├── README.md
-└── requirements.txt

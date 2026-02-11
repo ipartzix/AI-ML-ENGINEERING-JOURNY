@@ -1,0 +1,11 @@
+student_id,name,age,gender,math_score,english_score,attendance_percentage,parent_income
+101,Aman,20,M,78,85,92,50000
+102,Riya,19,F,88,,95,60000
+103,Karan,21,M,67,72,,45000
+104,Sneha,20,F,,90,88,
+105,Arjun,22,M,91,89,96,75000
+106,Pooja,19,F,73,68,85,40000
+107,Rahul,,M,84,79,90,52000
+108,Anjali,20,F,95,92,98,80000
+109,Vikram,21,M,59,65,70,
+110,Neha,19,F,82,,93,58000

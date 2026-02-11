@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\02_Python_Foundations\04_Pandas\dataset\updatecoffee_dataset.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

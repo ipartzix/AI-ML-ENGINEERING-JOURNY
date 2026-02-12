@@ -5,7 +5,7 @@ df = pd.read_csv(
     r"D:\AI ML ENGINEERING JOURNY\02_Python_Foundations\04_Pandas\dataset\students_performance.csv")  # Replace with your actual file name
 
 # 1️⃣ Check for missing values (column-wise count)
-print("Missing Values:\n", df.isnull().sum())
+print("Missing Values:\n - Data_Cleaning.py:8", df.isnull().sum())
 
 # 2️⃣ Fill missing values (example: replace NaN with 0)
 # df['Hours_Spent'] = df['Hours_Spent'].fillna(0)
@@ -17,4 +17,4 @@ print("Missing Values:\n", df.isnull().sum())
 df = df.drop_duplicates()
 
 # 4️⃣ Confirm changes
-print("\nShape after cleaning:", df.shape)
+print("\nShape after cleaning: - Data_Cleaning.py:20", df.shape)

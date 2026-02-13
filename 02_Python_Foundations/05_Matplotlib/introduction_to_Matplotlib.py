@@ -18,7 +18,7 @@ ax.set_title("Toggle Lines with CheckButtons")
 plt.subplots_adjust(left=0.25)  # Leave space for check buttons
 
 # Define position for CheckButtons [left, bottom, width, height]
-check_ax = plt.axes([0.05, 0.4, 0.15, 0.15])
+check_ax = plt.axes([0.05, 0.4, 0.15, 0.15]) # type: ignore
 labels = ('1 Hz', '2 Hz', '4 Hz')
 visibility = [l1.get_visible(), l2.get_visible(), l3.get_visible()]
 

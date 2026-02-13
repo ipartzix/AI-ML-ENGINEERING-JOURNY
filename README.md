@@ -119,7 +119,7 @@ Focus: Clean code, modularity, computational thinking.
 ### 09_Research_Implementations
 Reproducing influential AI research papers for deeper understanding.
 
-### 10_End_to_End_Projects
+### 10_Projects
 Complete ML systems from data ingestion to evaluation and deployment design.
 
 Some larger production-grade systems may also have independent repositories, while conceptual and developmental work remains documented here.

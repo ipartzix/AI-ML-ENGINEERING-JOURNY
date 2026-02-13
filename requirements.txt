@@ -37,7 +37,7 @@ ai-ml-engineering-journey/
 │ ├── Core Python
 │ ├── NumPy
 │ ├── Pandas
-│ └── Visualization
+│ └── Visualization( matplotlib )
 │
 ├── 03_Machine_Learning/
 │ # Purpose: Classical ML with theory + from-scratch implementations.

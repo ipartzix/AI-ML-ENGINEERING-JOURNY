@@ -84,7 +84,7 @@ ai-ml-engineering-journey/
 │ ├── BERT
 │ └── YOLOv8
 │
-├── 10_End_to_End_Projects/
+├── 10_Projects/
 │ # Purpose: Full ML systems from data ingestion to deployment.
 │ ├── Recommender_System
 │ ├── AI_Chatbot

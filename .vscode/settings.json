@@ -3,5 +3,8 @@
   "sarif-viewer.connectToGithubCodeScanning": "off",
   "code-runner.executorMap": {
     "python": "C:\\Users\\D\\anaconda3\\envs\\aiml_engineering\\python.exe -u"
-  }
+  },
+  "cSpell.words": [
+    "sarif"
+  ]
 }

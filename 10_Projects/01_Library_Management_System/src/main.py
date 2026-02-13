@@ -7,21 +7,21 @@ def main():
     user = UserData()
     library = Library()
 
-    print("=== Welcome to the Library Management System ===")
+    print("=== Welcome to the Library Management System === - main.py:10")
 
     # Step 1: Authentication (Login or Create Account)
     # user.menu() returns True if the user successfully logs in or signs up
     if user.menu():
         # Step 2: Extract identity and pass it to the library
         # This allows the library to track who is issuing books
-        library.current_user = user.get_user_identity()
+        library.current_user = user.get_user_identity() # type: ignore
 
         while True:
-            print("\n" + "=" * 30)
-            print(f"Logged in as: {library.current_user['name']}")
-            print("1. Browse Book Categories")
-            print("2. Return a book ")
-            print("3. Exit")
+            print("\n - main.py:20" + "=" * 30)
+            print(f"Logged in as: {library.current_user['name']} - main.py:21") # type: ignore
+            print("1. Browse Book Categories - main.py:22")
+            print("2. Return a book - main.py:23")
+            print("3. Exit - main.py:24")
 
             choice = input("Select an option: ")
 
@@ -41,7 +41,7 @@ def main():
                         # library.bookIssue returns a record dictionary if successful
                         record = library.bookIssue(category)
                         if record:
-                            print(f"\nSUCCESS: '{record['title']}' must be returned by {record['due_date']}.")
+                            print(f"\nSUCCESS: '{record['title']}' must be returned by {record['due_date']}. - main.py:44")
 
             # _____________________book return section____________________________
 
@@ -50,12 +50,12 @@ def main():
 
             # ___________________Loop exit point_______________________
             elif choice == "3":
-                print(f"Goodbye, {library.current_user['name']}!")
+                print(f"Goodbye, {library.current_user['name']}! - main.py:53") # type: ignore
                 break
             else:
-                print("Invalid input. Please try again.")
+                print("Invalid input. Please try again. - main.py:56")
     else:
-        print("Access denied. Please restart the program to try again.")
+        print("Access denied. Please restart the program to try again. - main.py:58")
 
 
 # ________________object________________

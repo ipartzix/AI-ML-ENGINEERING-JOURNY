@@ -14,127 +14,177 @@
   <img src="https://img.shields.io/badge/10_Projects-Green" alt="Projects">
 </p>
 
-A structured, end-to-end **AI/ML Engineering journey** covering mathematics, machine learning, deep learning, large
-language models, MLOps, and production-grade systems.
+---
 
-This repository is built with a strong emphasis on:
+## Overview
 
-- Fundamentals over shortcuts
-- Theory + implementation
-- Engineering discipline
-- Real-world applicability
+This repository documents my complete journey from beginner to AI/ML Engineer.
 
-It is designed as a **long-term learning and engineering workspace**, not a tutorial dump.
+It follows a structured, depth-first progression covering:
+
+- Mathematical foundations  
+- Python and numerical computing  
+- Machine Learning theory and implementation  
+- Deep Learning systems  
+- Transformers and Large Language Models  
+- MLOps and production-oriented ML  
+- Research paper implementations  
+- End-to-end AI systems  
+
+This is not a tutorial dump.  
+This is a disciplined engineering workspace built from first principles.
 
 ---
 
-## Purpose
+## Mission
 
 The objective of this repository is to:
 
-- Build strong mathematical and computer science foundations for AI/ML
-- Implement ML and DL algorithms with clear intuition
-- Progress from models to **production-oriented ML systems**
-- Bridge the gap between academic learning and industry expectations
+- Build strong mathematical and computer science foundations  
+- Implement ML and DL algorithms from scratch  
+- Develop system-level thinking  
+- Bridge academic understanding with industry-grade engineering  
+- Transition from student → ML Engineer through documented execution  
 
----
-
-## Repository Scope (High-Level)
-
-- **Mathematics** — linear algebra, calculus, probability, discrete math
-- **Python Foundations** — numerical computing and data handling
-- **Machine Learning** — classical ML (theory + from-scratch implementations)
-- **Deep Learning** — neural networks, optimization, CNNs, RNNs
-- **Computer Vision & NLP** — representation learning for images and text
-- **LLMs** — transformer internals, fine-tuning, inference pipelines
-- **MLOps** — experiment tracking, deployment, CI/CD
-- **Research Implementations** — reproducing influential AI papers
-- **End-to-End Projects** — complete ML systems from data to deployment
-
----
-
-## AI/ML Engineering Notes
-
-Living notes maintained alongside implementations, focusing on:
-
-- Mathematical intuition
-- Conceptual clarity
-- System-level understanding
-
-<p align="center">
-  <a href="https://1drv.ms/o/c/1ffa72c4dd11fc4c/IgANhHTEUObLQblp3iYi27smAYPHXRHdGk45JmBt0m2NwXI?e=pOMyff" target="_blank">
-    <img src="https://img.shields.io/badge/View-OneNote%20Notes-blue?style=for-the-badge&logo=microsoftonenote"
-         alt="OneNote Notes"/>
-  </a>
-</p>
-
----
-
-## Status
-
-- Actively maintained
-- Content evolves with understanding
-- Structure refined continuously
-- Focused on depth and correctness, not speed
+This repository represents structured growth, not shortcuts.
 
 ---
 
 ## Engineering Philosophy
 
-- Consistency > intensity
-- Depth > shortcuts
-- Engineering discipline > hype
+- Fundamentals over hype  
+- Clarity over memorization  
+- Implementation over theory-only  
+- Systems thinking over isolated scripts  
+- Consistency over intensity  
 
 ---
 
-*This repository represents ongoing work toward becoming a strong AI/ML Engineer.*
+## Repository Structure
+
+### 00_Orientation
+Defines goals, rules, tools, and long-term roadmap.
+
+### 01_Mathematics
+- Linear Algebra  
+- Calculus  
+- Probability & Statistics  
+- Discrete Mathematics  
+
+Focus: Mathematical intuition behind ML and DL.
+
+### 02_Python_Foundations
+- Core Python  
+- Object-Oriented Programming  
+- NumPy  
+- Pandas  
+- Visualization  
+
+Focus: Clean code, modularity, computational thinking.
+
+### 03_Machine_Learning
+- ML theory  
+- Supervised & Unsupervised learning  
+- From-scratch implementations  
+- Evaluation and model understanding  
+
+### 04_Deep_Learning
+- Neural networks  
+- Backpropagation  
+- Optimization  
+- CNN, RNN, LSTM foundations  
+
+### 05_Computer_Vision
+- Image classification  
+- Transfer learning  
+- Representation learning  
+
+### 06_NLP
+- Text preprocessing  
+- Embeddings  
+- Sequence modeling  
+- Transformer foundations  
+
+### 07_LLMs
+- Transformer internals  
+- Fine-tuning workflows  
+- Inference pipelines  
+
+### 08_MLOps
+- Experiment tracking  
+- Deployment concepts  
+- CI/CD fundamentals  
+- Production mindset  
+
+### 09_Research_Implementations
+Reproducing influential AI research papers for deeper understanding.
+
+### 10_End_to_End_Projects
+Complete ML systems from data ingestion to evaluation and deployment design.
+
+Some larger production-grade systems may also have independent repositories, while conceptual and developmental work remains documented here.
 
 ---
 
-## January Progress (Foundations Completed)
+## Technical Stack
 
-**Focus:** Core programming and mathematical foundations for AI/ML engineering.
+Core Tools & Libraries Used:
+
+- Python  
+- NumPy  
+- Pandas  
+- Matplotlib  
+- scikit-learn  
+- PyTorch (planned for deep learning stages)  
+- Docker & MLflow (planned for MLOps stage)  
+
+---
+
+## January Progress — Foundations Completed
 
 ### Python Foundations
+- Completed Python from fundamentals to advanced concepts  
+- Strong understanding of:
+  - Core data types and control flow  
+  - Modular programming  
+  - Object-Oriented Programming (OOP)  
+  - Clean architecture principles  
 
-- Completed Python from fundamentals to advanced concepts
-- Strong command over:
-    - Core data types and control flow
-    - Functions and modular programming
-    - Object-Oriented Programming (OOP)
+### Project: Library Management System
+- Designed and implemented a complete OOP-based system  
+- Applied abstraction, encapsulation, and modular design  
+- Focused on structured code organization  
 
-### Project: Library Management System (Python OOP)
-
-- Designed and implemented a complete Library Management System
-- Applied:
-    - Class-based architecture
-    - Encapsulation and abstraction
-    - Real-world entity modeling
-- Emphasis on clean structure and engineering discipline
-
-### Mathematics for Machine Learning
-
-- **Calculus**
-    - Core concepts required for optimization and gradient-based learning
-- **Linear Algebra**
-    - Vectors and matrices
-    - Matrix operations
-    - Determinants and transformations
-    - Mathematical intuition behind ML computations
+### Mathematics for ML
+- Calculus: Optimization intuition and gradient understanding  
+- Linear Algebra: Vectors, matrices, transformations, determinants  
 
 ### Numerical Computing
+- NumPy: Vectorized computation, broadcasting, matrix operations  
+- Applied numerical reasoning beyond simple library usage  
 
-- **NumPy**
-    - Array and matrix manipulation
-    - Vectorized operations
-    - Broadcasting
-    - Statistical computations
-    - Real-life data processing use cases
+**Outcome:**  
+Built a strong theoretical and computational foundation for Machine Learning engineering.
 
-### Outcome
+---
 
-- Built a strong mathematical and numerical foundation for Machine Learning
-- Improved ability to reason about ML algorithms beyond library usage
-- Ready to transition from foundations to Machine Learning implementation
+## Current Status
 
-*January was dedicated to depth-first fundamentals that future ML, DL, and systems work will rely on.*
+- Actively maintained  
+- Updated alongside learning progression  
+- Structure refined as understanding deepens  
+- Focused on depth, precision, and engineering discipline  
+
+---
+
+## Long-Term Vision
+
+This repository represents the documented transformation:
+
+**Student → Practitioner → Engineer → Systems Thinker**
+
+Every section builds toward production-ready ML capability and advanced AI system design.
+
+---
+
+*This is an evolving engineering journal of building AI systems from first principles.*

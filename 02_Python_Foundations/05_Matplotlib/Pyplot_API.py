@@ -11,4 +11,5 @@ print(df.head(5))
 
 # Line plot 
 plt.plot(df["Salary"])
+plt.grid()
 plt.show()

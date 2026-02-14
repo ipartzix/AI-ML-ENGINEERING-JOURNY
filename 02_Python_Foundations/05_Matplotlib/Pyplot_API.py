@@ -10,6 +10,6 @@ df = pd.DataFrame(data)
 print(df.head(5))
 
 # Line plot 
-plt.plot(df["Salary"],color="red",marker="o",linestyle= ":")
+plt.plot(df["Salary"],color="red",marker="o",linestyle= ":",linewidth="2")
 plt.grid()
 plt.show()

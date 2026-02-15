@@ -23,6 +23,23 @@ print("Axes objects array: - 02_Object_Oriented_API.py:22", axs)
 
 # Example plot on first subplot
 axs[0].plot(sort_age["Age"], df["Salary"], color="red", marker="*", linewidth=2)
-axs[0].set_title("Age vs Salary")
+axs[0].set_xlabel("Age")
+axs[0].set_ylabel("Salary")
+axs[0].set_title("Line Plot")
+axs[0].grid()
 
+# Histogram
+axs[1].hist(df["Salary"], bins=5, color="red")
+axs[1].set_xlabel("Salary")
+axs[1].set_ylabel("Frequency")
+axs[1].set_title("Histogram")
+axs[1].grid()
+
+# Boxplot
+axs[2].boxplot(df["Salary"])
+axs[2].set_xlabel("Salary")
+axs[2].set_ylabel("Frequency")
+axs[2].set_title("Boxplot")
+axs[2].grid()
+plt.savefig(r"D:\AI ML ENGINEERING JOURNY\02_Python_Foundations\05_Matplotlib\MULTIPLE_PLOT.png")
 plt.show()

@@ -10,7 +10,7 @@ df = pd.DataFrame(data)
 print(df.head(5))
 
 # Line plot 
-plt.plot(df["Salary"],color="red",marker="o",linestyle= ":",linewidth="2")
+plt.plot(df["Salary"],color="red",marker="o",linestyle= ":",linewidth=2)
 plt.grid()
 plt.show()
 
@@ -21,3 +21,8 @@ plt.show()
 #Boxplot
 plt.boxplot(df["Salary"])
 plt.show()
+
+#Univarite : Categorical
+df["dept"]=["HR","IT","FINANCE","ENGINEER","CA","DOCTOR","TEACHER","IPS","IAS","ARMY"]
+print(df.head())
+df.info()

@@ -17,3 +17,7 @@ plt.show()
 # Histogram
 plt.hist(df["Salary"],bins =5 ,color="green")
 plt.show()
+
+#Boxplot
+plt.boxplot(df["Salary"])
+plt.show()

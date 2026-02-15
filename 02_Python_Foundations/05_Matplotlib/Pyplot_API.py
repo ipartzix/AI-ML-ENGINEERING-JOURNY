@@ -1,35 +1,46 @@
-import pandas as pd 
-import matplotlib.pyplot as plt 
+import pandas as pd
+import matplotlib.pyplot as plt
 
 # Univariate - Numerical
 data = {
-    "Salary": [120000, 34000, 77000, 760000, 32000,54000, 670000, 45000, 13400, 29000]
+    "Salary": [120000, 34000, 77000, 760000, 32000, 54000, 670000, 45000, 13400, 29000]
 }
 
 df = pd.DataFrame(data)
 print(df.head(5))
 
-# Line plot 
-plt.plot(df["Salary"],color="red",marker="o",linestyle= ":",linewidth=2)
+# Line plot
+plt.plot(df["Salary"], color="red", marker="o", linestyle=":", linewidth=2)
 plt.grid()
 plt.show()
 
 # Histogram
-plt.hist(df["Salary"],bins =5 ,color="green")
+plt.hist(df["Salary"], bins=5, color="green")
 plt.show()
 
-#Boxplot
+# Boxplot
 plt.boxplot(df["Salary"])
 plt.show()
 
-#Univarite : Categorical
-df["dept"]=["HR","IT","FINANCE","ENGINEER","CA","DOCTOR","TEACHER","IPS","IAS","ARMY"]
+# Univarite : Categorical
+df["dept"] = [
+    "HR",
+    "IT",
+    "FINANCE",
+    "ENGINEER",
+    "CA",
+    "DOCTOR",
+    "TEACHER",
+    "IPS",
+    "IAS",
+    "ARMY",
+]
 print(df.head())
 df.info()
 
-#Pie chart:
-count =df["dept"].value_counts()
-plt.pie(count,labels=count.index,autopct="%1.1f",explode=[0,0.1]+[0]*8) # type: ignore
+# Pie chart:
+count = df["dept"].value_counts()
+plt.pie(count, labels=count.index, autopct="%1.1f", explode=[0, 0.1] + [0] * 8)  # type: ignore
 # Pie chart: each value in 'explode' controls how far a slice moves outward.
 # 0 → normal position (no shift)
 # 0.1 → slice moves 10% of the radius away from the center
@@ -39,7 +50,30 @@ plt.pie(count,labels=count.index,autopct="%1.1f",explode=[0,0.1]+[0]*8) # type: 
 plt.show()
 
 # countplot
-plt.bar(count.index, count, color=["green","blue","black","red","purple","orange","cyan","magenta","yellow","gray"])
-plt.xticks(rotation=90)   # rotate labels
-plt.tight_layout()        # adjust spacing
+plt.bar(
+    count.index,
+    count,
+    color=[
+        "green",
+        "blue",
+        "black",
+        "red",
+        "purple",
+        "orange",
+        "cyan",
+        "magenta",
+        "yellow",
+        "gray",
+    ],
+)
+plt.xticks(rotation=90)  # rotate labels
+plt.tight_layout()  # adjust spacing
+plt.show()
+
+# Bivariate -numerical
+df["Age"] = [22, 34, 55, 66, 33, 30, 31, 26, 28, 38]
+print(df.head())
+
+#Scatter Plot:
+plt.scatter(df["Age"],df["Salary"],color="blue")
 plt.show()

@@ -84,3 +84,7 @@ sort_age =df.sort_values("Age") # we are short the age for better visualization
 plt.plot(sort_age["Age"],df["Salary"],color="red",marker="*",linewidth=2)
 plt.grid()
 plt.show()
+
+#Bar Chart
+plt.bar(sort_age["Age"],df["Salary"],color="red",align="edge")
+plt.show()

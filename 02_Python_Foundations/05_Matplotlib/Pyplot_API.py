@@ -26,3 +26,8 @@ plt.show()
 df["dept"]=["HR","IT","FINANCE","ENGINEER","CA","DOCTOR","TEACHER","IPS","IAS","ARMY"]
 print(df.head())
 df.info()
+
+#Pie chart:
+count =df["dept"].value_counts()
+plt.pie(count,labels=count.index) # type: ignore
+plt.show()

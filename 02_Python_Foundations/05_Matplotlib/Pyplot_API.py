@@ -125,3 +125,17 @@ plt.xlabel("Age")
 plt.ylabel("Salary")
 plt.grid()
 plt.show()
+for dept in df["dept"].unique():
+    subset = df[df["dept"] == dept]
+    plt.scatter(
+        subset["Age"],
+        subset["Salary"],
+        label=dept
+    )
+
+plt.title("Age vs Salary")
+plt.xlabel("Age")
+plt.ylabel("Salary")
+plt.legend()   # show labels
+plt.grid()
+plt.show()

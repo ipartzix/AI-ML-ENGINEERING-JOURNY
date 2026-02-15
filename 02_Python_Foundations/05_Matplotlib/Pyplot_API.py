@@ -101,3 +101,7 @@ plt.show()
 #Multivariate Analysis :
 df["experience"] = [1,2,3,4,5,6,7,8,9,10]
 df.head()
+
+#Bubble Plot:
+plt.scatter(df["Age"],df["Salary"],s=df["experience"]*10,color ="blue")
+plt.show()

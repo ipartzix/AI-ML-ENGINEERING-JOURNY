@@ -102,6 +102,26 @@ plt.show()
 df["experience"] = [1,2,3,4,5,6,7,8,9,10]
 df.head()
 
-#Bubble Plot:
+#Bubble Plot: 3 numerical value 
 plt.scatter(df["Age"],df["Salary"],s=df["experience"]*10,color ="blue",edgecolors="black")
+plt.title("Age vs Salary vs Experience")
+plt.xlabel("Age")
+plt.ylabel("Salary")
+plt.grid()
+plt.show()
+
+# 2 numerical value 
+plt.scatter(
+    df["Age"],
+    df["Salary"],
+    c=df["dept"].map({
+        "HR":"blue","IT":"red","FINANCE":"green","ENGINEER":"skyblue",
+        "CA":"yellow","DOCTOR":"black","TEACHER":"red","IPS":"green",
+        "IAS":"purple","ARMY":"orange"
+    })
+)
+plt.title("Age vs Salary vs Experience")
+plt.xlabel("Age")
+plt.ylabel("Salary")
+plt.grid()
 plt.show()

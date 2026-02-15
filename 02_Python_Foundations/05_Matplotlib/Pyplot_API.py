@@ -94,6 +94,10 @@ print("# box plot is a way to represent the numerical and categorical collumn\n 
 # pie chart :
 salary_by_dept=df.groupby("dept")["Salary"].sum()
 print(salary_by_dept)
-plt.pie(salary_by_dept,labels=salary_by_dept.index, autopct="%1.2f") # type: ignore # t
+plt.pie(salary_by_dept,labels=salary_by_dept.index, autopct="%1.2f",shadow=True) # type: ignore # t
 plt.axis("equal")
 plt.show()
+
+#Multivariate Analysis :
+df["experience"] = [1,2,3,4,5,6,7,8,9,10]
+df.head()

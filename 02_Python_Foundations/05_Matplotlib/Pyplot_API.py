@@ -29,5 +29,11 @@ df.info()
 
 #Pie chart:
 count =df["dept"].value_counts()
-plt.pie(count,labels=count.index) # type: ignore
+plt.pie(count,labels=count.index,autopct="%1.1f",explode=[0,0.1]+[0]*8) # type: ignore
+# Pie chart: each value in 'explode' controls how far a slice moves outward.
+# 0 → normal position (no shift)
+# 0.1 → slice moves 10% of the radius away from the center
+# Length of 'explode' must equal number of slices (one value per slice)
+# Example: explode=[0, 0.1] + [0]*8 → only second slice is highlighted
+
 plt.show()

@@ -37,3 +37,9 @@ plt.pie(count,labels=count.index,autopct="%1.1f",explode=[0,0.1]+[0]*8) # type: 
 # Example: explode=[0, 0.1] + [0]*8 → only second slice is highlighted
 
 plt.show()
+
+# countplot
+plt.bar(count.index, count, color=["green","blue","black","red","purple","orange","cyan","magenta","yellow","gray"])
+plt.xticks(rotation=90)   # rotate labels
+plt.tight_layout()        # adjust spacing
+plt.show()

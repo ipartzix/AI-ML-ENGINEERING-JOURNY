@@ -13,3 +13,7 @@ print(df.head(5))
 plt.plot(df["Salary"],color="red",marker="o",linestyle= ":",linewidth="2")
 plt.grid()
 plt.show()
+
+# Histogram
+plt.hist(df["Salary"],bins =5 ,color="green")
+plt.show()

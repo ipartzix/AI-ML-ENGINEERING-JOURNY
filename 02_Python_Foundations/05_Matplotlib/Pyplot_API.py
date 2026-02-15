@@ -77,3 +77,10 @@ print(df.head())
 #Scatter Plot:
 plt.scatter(df["Age"],df["Salary"],color="blue")
 plt.show()
+
+sort_age =df.sort_values("Age") # we are short the age for better visualization 
+
+#line Plot:
+plt.plot(sort_age["Age"],df["Salary"],color="red",marker="*",linewidth=2)
+plt.grid()
+plt.show()

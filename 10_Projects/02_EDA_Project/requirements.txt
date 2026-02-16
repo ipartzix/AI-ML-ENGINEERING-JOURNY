@@ -23,3 +23,5 @@ EDA_Project_Name/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
+
+there are vary missmatch of things so i decide i woill make a project on EDA completely by myself 

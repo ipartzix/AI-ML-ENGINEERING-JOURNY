@@ -1,0 +1,26 @@
+EDA_Project_Name/
+│
+├── data/
+│   ├── raw/
+│   │   └── dataset.csv
+│   ├── processed/
+│   │   └── cleaned_dataset.csv
+│
+├── notebooks/
+│   └── eda_analysis.ipynb
+│
+├── src/
+│   ├── data_cleaning.py
+│   ├── feature_engineering.py
+│   ├── visualization.py
+│
+├── reports/
+│   ├── figures/
+│   │   ├── distribution_plots.png
+│   │   ├── correlation_heatmap.png
+│   │   └── outlier_analysis.png
+│   └── eda_summary.md
+│
+├── requirements.txt
+├── README.md
+└── .gitignore

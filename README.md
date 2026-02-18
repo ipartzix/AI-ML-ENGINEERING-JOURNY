@@ -174,6 +174,7 @@ Built a strong theoretical and computational foundation for Machine Learning eng
 - Updated alongside learning progression  
 - Structure refined as understanding deepens  
 - Focused on depth, precision, and engineering discipline  
+- Convert all jupitor notebook in python script  
 
 ---
 

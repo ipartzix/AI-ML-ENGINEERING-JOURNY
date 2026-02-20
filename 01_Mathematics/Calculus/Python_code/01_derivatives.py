@@ -1,73 +1,87 @@
-# Generated from: 01_derivatives.ipynb
-# Converted at: 2026-02-18T08:41:24.517Z
-# Next step (optional): refactor into modules & generate tests with RunCell
-# Quick start: pip install runcell
+"""
+Derivatives (Calculus for Machine Learning)
 
-# # Derivatives (Calculus for Machine Learning)
-# 
-# **Purpose:** Understand how change is measured and how derivatives drive optimization in ML.
+Purpose:
+Understand rate of change and how derivatives drive optimization in ML.
+"""
 
-
-# ## 1. What is a Derivative?
-# A derivative measures the **rate of change** of a function with respect to its input.
-# 
-# In ML, derivatives tell us **how much the loss changes when parameters change**.
-
-
-import matplotlib.pyplot as plt
 import numpy as np
-
-x = np.linspace(-5, 5, 100)
-y = x ** 2
-
-plt.figure()
-plt.plot(x, y)
-plt.xlabel('x')
-plt.ylabel('f(x) = x^2')
-plt.title('Function f(x) = x^2')
-plt.show()
-
-# ## 2. Geometric Interpretation
-# The derivative at a point is the **slope of the tangent line** at that point.
+import matplotlib.pyplot as plt
 
 
-x0 = 2
-y0 = x0 ** 2
-slope = 2 * x0
+# ==========================================================
+# Core Math Functions
+# ==========================================================
 
-tangent_y = slope * (x - x0) + y0
-
-plt.figure()
-plt.plot(x, y, label='f(x) = x^2')
-plt.plot(x, tangent_y, '--', label='Tangent at x=2')
-plt.scatter([x0], [y0])
-plt.legend()
-plt.title('Derivative as Slope of Tangent')
-plt.show()
+def quadratic_function(x: np.ndarray) -> np.ndarray:
+    """Return f(x) = x^2"""
+    return x ** 2
 
 
-# ## 3. Numerical vs Analytical Derivative
-# Numerical derivative approximates change using small differences.
-# Analytical derivative uses exact mathematical formulas.
+def analytical_derivative(x: float) -> float:
+    """Return analytical derivative of f(x) = x^2 → 2x"""
+    return 2 * x
 
 
-def numerical_derivative(f, x, h=1e-5):
+def numerical_derivative(f, x: float, h: float = 1e-5) -> float:
+    """
+    Compute numerical derivative using central difference formula.
+    """
     return (f(x + h) - f(x - h)) / (2 * h)
 
 
-f = lambda x: x ** 2
-print('Numerical derivative at x=2:', numerical_derivative(f, 2))
-print('Analytical derivative at x=2:', 2 * 2)
+# ==========================================================
+# Visualization Functions
+# ==========================================================
 
-# ## 4. Why Derivatives Matter in ML
-# - Used to minimize loss functions
-# - Core of gradient descent
-# - Foundation of backpropagation
+def plot_function(x: np.ndarray) -> None:
+    """Plot the quadratic function."""
+    y = quadratic_function(x)
+
+    plt.figure()
+    plt.plot(x, y)
+    plt.xlabel("x")
+    plt.ylabel("f(x) = x^2")
+    plt.title("Function Plot")
+    plt.grid(True)
+    plt.show()
 
 
-# ## 5. Key Takeaways
-# - Derivative = rate of change
-# - Geometrically = slope of tangent
-# - ML uses derivatives to learn parameters
-# 
-# **This notebook completes the derivative foundation for ML.**
+def plot_tangent(x: np.ndarray, x0: float) -> None:
+    """Plot function and tangent line at a given point."""
+    y = quadratic_function(x)
+    y0 = quadratic_function(x0)
+    slope = analytical_derivative(x0)
+
+    tangent_line = slope * (x - x0) + y0
+
+    plt.figure()
+    plt.plot(x, y, label="f(x) = x^2")
+    plt.plot(x, tangent_line, "--", label=f"Tangent at x={x0}")
+    plt.scatter([x0], [y0])
+    plt.legend()
+    plt.title("Derivative as Tangent Slope")
+    plt.grid(True)
+    plt.show()
+
+
+# ==========================================================
+# Execution Entry Point
+# ==========================================================
+
+def main() -> None:
+    x = np.linspace(-5, 5, 100)
+    x0 = 2
+
+    plot_function(x)
+    plot_tangent(x, x0)
+
+    num_deriv = numerical_derivative(quadratic_function, x0)
+    ana_deriv = analytical_derivative(x0)
+
+    print(f"Numerical derivative at x={x0}: {num_deriv} - 01_derivatives.py:82")
+    print(f"Analytical derivative at x={x0}: {ana_deriv} - 01_derivatives.py:83")
+
+
+if __name__ == "__main__":
+    main()

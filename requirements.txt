@@ -42,6 +42,7 @@ ai-ml-engineering-journey/
 ├── 03_Machine_Learning/
 │ # Purpose: Classical ML with theory + from-scratch implementations.
 │ ├── ML_Theory/
+│ ├── Feature_Engineering/ 
 │ ├── Supervised_Learning/
 │ ├── Unsupervised_Learning/
 │ └── ML_Engineering/

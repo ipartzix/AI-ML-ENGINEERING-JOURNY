@@ -1,83 +1,112 @@
-# Generated from: 03_chain_rule.ipynb
-# Converted at: 2026-02-18T08:42:11.726Z
-# Next step (optional): refactor into modules & generate tests with RunCell
-# Quick start: pip install runcell
+"""
+Chain Rule (Calculus for Machine Learning)
 
-# # Chain Rule (Calculus for Machine Learning)
-# 
-# **Purpose:** Understand how derivatives flow through composed functions, which is the mathematical backbone of backpropagation.
-
-
-# ## Chain Rule Concept
-# The chain rule is used when a function is composed of multiple functions.
-# 
-# If:
-# $$ y = f(g(x)) $$
-# Then:
-# $$ \frac{dy}{dx} = \frac{dy}{dg} \cdot \frac{dg}{dx} $$
-# 
-# In ML, models are compositions of many functions (layers).
-
-
-# ## Simple Example
-# Consider:
-# $$ y = (3x + 1)^2 $$
-
+Purpose:
+Understand how derivatives propagate through composed functions.
+This is the mathematical backbone of backpropagation.
+"""
 
 import numpy as np
+import matplotlib.pyplot as plt
 
 
-def g(x):
+# ==========================================================
+# Function Definitions
+# ==========================================================
+
+def inner_function(x: float) -> float:
+    """g(x) = 3x + 1"""
     return 3 * x + 1
 
 
-def f(u):
+def outer_function(u: float) -> float:
+    """f(u) = u^2"""
     return u ** 2
 
 
-def dy_dx(x):
-    return 2 * (3 * x + 1) * 3
+def composed_function(x: float) -> float:
+    """y = f(g(x)) = (3x + 1)^2"""
+    return outer_function(inner_function(x))
 
 
-print('dy/dx at x=2:', dy_dx(2))
+# ==========================================================
+# Analytical Derivative via Chain Rule
+# ==========================================================
 
-# ## Computational Graph View
-# The chain rule can be visualized as a flow of derivatives through a graph.
-# 
-# Each node passes gradients backward to the previous node.
-
-
-import matplotlib.pyplot as plt
-
-x = np.linspace(-3, 3, 100)
-y = (3 * x + 1) ** 2
-
-plt.figure()
-plt.plot(x, y)
-plt.xlabel('x')
-plt.ylabel('y')
-plt.title('y = (3x + 1)^2')
-plt.show()
-
-# ## Multivariable Chain Rule
-# For multivariable functions:
-# 
-# $$ z = f(x, y), \quad x = g(t), \quad y = h(t) $$
-# 
-# $$ \frac{dz}{dt} = \frac{\partial z}{\partial x}\frac{dx}{dt} + \frac{\partial z}{\partial y}\frac{dy}{dt} $$
-# 
-# This form is heavily used in neural networks.
+def analytical_derivative(x: float) -> float:
+    """
+    dy/dx = dy/du * du/dx
+          = 2(3x + 1) * 3
+    """
+    return 2 * inner_function(x) * 3
 
 
-# ## Chain Rule in Neural Networks
-# - Each layer applies a function
-# - Gradients flow backward using the chain rule
-# - Enables efficient training of deep models
+# ==========================================================
+# Numerical Derivative (Verification)
+# ==========================================================
+
+def numerical_derivative(f, x: float, h: float = 1e-5) -> float:
+    """Central difference approximation."""
+    return (f(x + h) - f(x - h)) / (2 * h)
 
 
-# ## Summary
-# - Chain rule handles composed functions
-# - Core mechanism behind backpropagation
-# - Without chain rule, deep learning is impossible
-# 
-# **This notebook completes the chain rule foundation for ML.**
+# ==========================================================
+# Visualization
+# ==========================================================
+
+def plot_composed_function() -> None:
+    """Plot y = (3x + 1)^2."""
+    x = np.linspace(-3, 3, 100)
+    y = composed_function(x)
+
+    plt.figure()
+    plt.plot(x, y)
+    plt.xlabel("x")
+    plt.ylabel("y")
+    plt.title("y = (3x + 1)^2")
+    plt.grid(True)
+    plt.show()
+
+
+# ==========================================================
+# Multivariable Chain Rule Example
+# ==========================================================
+
+def multivariable_chain_rule_example(t: float) -> float:
+    """
+    Example:
+    z = x^2 + y^2
+    x = t
+    y = 2t
+
+    dz/dt = ∂z/∂x * dx/dt + ∂z/∂y * dy/dt
+    """
+    x = t
+    y = 2 * t
+
+    dz_dx = 2 * x
+    dz_dy = 2 * y
+
+    dx_dt = 1
+    dy_dt = 2
+
+    return dz_dx * dx_dt + dz_dy * dy_dt
+
+
+# ==========================================================
+# Execution Entry Point
+# ==========================================================
+
+def main() -> None:
+    x0 = 2
+
+    print(f"Analytical dy/dx at x={x0}: {analytical_derivative(x0)} - 03_chain_rule.py:103")
+    print(f"Numerical dy/dx at x={x0}: {numerical_derivative(composed_function, x0)} - 03_chain_rule.py:104")
+
+    print(f"Multivariable chain rule at t=1: {multivariable_chain_rule_example(1)} - 03_chain_rule.py:106")
+
+    plot_composed_function()
+
+
+if __name__ == "__main__":
+    main()

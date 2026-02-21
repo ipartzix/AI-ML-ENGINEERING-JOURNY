@@ -1,68 +1,118 @@
-# Generated from: 06_loss_functions_derivatives.ipynb
-# Converted at: 2026-02-18T08:42:57.815Z
-# Next step (optional): refactor into modules & generate tests with RunCell
-# Quick start: pip install runcell
+"""
+Loss Functions & Their Derivatives
 
-# # Loss Functions & Their Derivatives (Calculus for Machine Learning)
-# 
-# **Purpose:** Understand how loss functions quantify error and how their derivatives guide learning.
+Purpose:
+Understand how loss functions quantify prediction error
+and how their derivatives drive optimization.
+"""
 
-
-# ## Loss Function Overview
-# A loss function measures prediction error. Training minimizes this loss using gradients.
-
-
-# ## Mean Squared Error (MSE)
-# $$ L = (y - \hat{y})^2 $$
-
-
-import matplotlib.pyplot as plt
 import numpy as np
-
-e = np.linspace(-5, 5, 100)
-loss_mse = e ** 2
-
-plt.figure()
-plt.plot(e, loss_mse)
-plt.xlabel('Error')
-plt.ylabel('Loss')
-plt.title('Mean Squared Error')
-plt.show()
-
-# ## Mean Absolute Error (MAE)
-# $$ L = |y - \hat{y}| $$
+import matplotlib.pyplot as plt
 
 
-loss_mae = np.abs(e)
+# ==========================================================
+# Mean Squared Error (MSE)
+# ==========================================================
 
-plt.figure()
-plt.plot(e, loss_mae)
-plt.xlabel('Error')
-plt.ylabel('Loss')
-plt.title('Mean Absolute Error')
-plt.show()
-
-# ## Binary Cross-Entropy
-# $$ L = -[y\log(\hat{y}) + (1-y)\log(1-\hat{y})] $$
+def mse_loss(y_true: np.ndarray, y_pred: np.ndarray) -> np.ndarray:
+    """Mean Squared Error: (y - y_hat)^2"""
+    return (y_true - y_pred) ** 2
 
 
-p = np.linspace(0.01, 0.99, 100)
-loss_ce = -np.log(p)
-
-plt.figure()
-plt.plot(p, loss_ce)
-plt.xlabel('Predicted Probability')
-plt.ylabel('Loss')
-plt.title('Binary Cross-Entropy (y=1)')
-plt.show()
-
-# ## ML Connection
-# - Loss derivatives determine gradient direction
-# - Different tasks require different losses
-# - Combined with backpropagation for training
+def mse_gradient(y_true: np.ndarray, y_pred: np.ndarray) -> np.ndarray:
+    """Derivative of MSE with respect to y_pred."""
+    return -2 * (y_true - y_pred)
 
 
-# ## Summary
-# - Loss functions measure error
-# - Derivatives enable optimization
-# - Essential for regression and classification
+# ==========================================================
+# Mean Absolute Error (MAE)
+# ==========================================================
+
+def mae_loss(y_true: np.ndarray, y_pred: np.ndarray) -> np.ndarray:
+    """Mean Absolute Error: |y - y_hat|"""
+    return np.abs(y_true - y_pred)
+
+
+def mae_gradient(y_true: np.ndarray, y_pred: np.ndarray) -> np.ndarray:
+    """
+    Subgradient of MAE.
+    Note: Not differentiable at zero.
+    """
+    return np.sign(y_pred - y_true)
+
+
+# ==========================================================
+# Binary Cross-Entropy (BCE)
+# ==========================================================
+
+def binary_cross_entropy(y_true: np.ndarray, y_pred: np.ndarray) -> np.ndarray:
+    """
+    Binary Cross-Entropy Loss:
+    -[y log(p) + (1-y) log(1-p)]
+
+    Includes numerical stability clipping.
+    """
+    epsilon = 1e-9
+    y_pred = np.clip(y_pred, epsilon, 1 - epsilon)
+    return -(y_true * np.log(y_pred) + (1 - y_true) * np.log(1 - y_pred))
+
+
+def bce_gradient(y_true: np.ndarray, y_pred: np.ndarray) -> np.ndarray:
+    """
+    Derivative of BCE with respect to y_pred.
+    """
+    epsilon = 1e-9
+    y_pred = np.clip(y_pred, epsilon, 1 - epsilon)
+    return (y_pred - y_true) / (y_pred * (1 - y_pred))
+
+
+# ==========================================================
+# Visualization
+# ==========================================================
+
+def plot_regression_losses():
+    error = np.linspace(-5, 5, 200)
+    y_true = np.zeros_like(error)
+    y_pred = error
+
+    plt.figure()
+    plt.plot(error, mse_loss(y_true, y_pred))
+    plt.title("Mean Squared Error")
+    plt.xlabel("Error")
+    plt.ylabel("Loss")
+    plt.grid(True)
+    plt.show()
+
+    plt.figure()
+    plt.plot(error, mae_loss(y_true, y_pred))
+    plt.title("Mean Absolute Error")
+    plt.xlabel("Error")
+    plt.ylabel("Loss")
+    plt.grid(True)
+    plt.show()
+
+
+def plot_binary_cross_entropy():
+    p = np.linspace(0.01, 0.99, 200)
+    y_true = np.ones_like(p)
+
+    plt.figure()
+    plt.plot(p, binary_cross_entropy(y_true, p))
+    plt.title("Binary Cross-Entropy (y=1)")
+    plt.xlabel("Predicted Probability")
+    plt.ylabel("Loss")
+    plt.grid(True)
+    plt.show()
+
+
+# ==========================================================
+# Execution Entry Point
+# ==========================================================
+
+def main():
+    plot_regression_losses()
+    plot_binary_cross_entropy()
+
+
+if __name__ == "__main__":
+    main()

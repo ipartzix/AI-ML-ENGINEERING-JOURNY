@@ -1,84 +1,111 @@
-# Generated from: 07_backpropagation_math.ipynb
-# Converted at: 2026-02-18T08:43:10.648Z
-# Next step (optional): refactor into modules & generate tests with RunCell
-# Quick start: pip install runcell
+"""
+Backpropagation (Mathematical Foundation for Neural Networks)
 
-# # Backpropagation (Math for Machine Learning)
-# 
-# **Purpose:** Understand how gradients are computed efficiently in neural networks using the chain rule.
+Purpose:
+Compute gradients of loss with respect to model parameters
+using the chain rule.
+"""
 
-
-# ## What is Backpropagation?
-# Backpropagation is an algorithm to compute **gradients of the loss with respect to model parameters**.
-# 
-# It applies the **chain rule repeatedly** from output layer to input layer.
+import numpy as np
 
 
-# ## Simple Neural Network Example
-# Consider a single neuron:
-# 
-# $$ z = wx + b $$
-# $$ \hat{y} = z $$
-# $$ L = (y - \hat{y})^2 $$
+# ==========================================================
+# Forward Pass
+# ==========================================================
+
+def forward(x: float, w: float, b: float) -> float:
+    """
+    Single neuron forward pass:
+    z = wx + b
+    y_hat = z (identity activation)
+    """
+    return w * x + b
 
 
-def forward(x, w, b):
-    z = w * x + b
-    return z
+# ==========================================================
+# Loss Function
+# ==========================================================
+
+def mse_loss(y_true: float, y_pred: float) -> float:
+    """Mean Squared Error."""
+    return (y_true - y_pred) ** 2
 
 
-def loss(y, y_hat):
-    return (y - y_hat) ** 2
+def mse_gradient(y_true: float, y_pred: float) -> float:
+    """dL/dy_hat for MSE."""
+    return -2 * (y_true - y_pred)
 
 
-x, w, b, y = 2.0, 1.5, 0.5, 4.0
-y_hat = forward(x, w, b)
-print('Prediction:', y_hat)
-print('Loss:', loss(y, y_hat))
+# ==========================================================
+# Backward Pass (Backpropagation)
+# ==========================================================
 
-# ## Backward Pass (Derivatives)
-# Using chain rule:
-# 
-# $$ \frac{dL}{dw} = \frac{dL}{d\hat{y}} \cdot \frac{d\hat{y}}{dz} \cdot \frac{dz}{dw} $$
-# $$ \frac{dL}{db} = \frac{dL}{d\hat{y}} \cdot \frac{d\hat{y}}{dz} \cdot \frac{dz}{db} $$
+def backward(x: float, y_true: float, w: float, b: float):
+    """
+    Compute gradients using chain rule.
+    Returns gradients for w and b.
+    """
 
+    # Forward computation
+    y_hat = forward(x, w, b)
 
-dL_dyhat = -2 * (y - y_hat)
-dyhat_dz = 1
-dz_dw = x
-dz_db = 1
+    # Local gradients
+    dL_dyhat = mse_gradient(y_true, y_hat)
+    dyhat_dz = 1.0
+    dz_dw = x
+    dz_db = 1.0
 
-dL_dw = dL_dyhat * dyhat_dz * dz_dw
-dL_db = dL_dyhat * dyhat_dz * dz_db
+    # Chain rule
+    dL_dw = dL_dyhat * dyhat_dz * dz_dw
+    dL_db = dL_dyhat * dyhat_dz * dz_db
 
-print('dL/dw:', dL_dw)
-print('dL/db:', dL_db)
-
-# ## Parameter Update (Gradient Descent)
-# $$ w = w - \eta \frac{dL}{dw} $$
-# $$ b = b - \eta \frac{dL}{db} $$
+    return dL_dw, dL_db
 
 
-lr = 0.1
-w_new = w - lr * dL_dw
-b_new = b - lr * dL_db
+# ==========================================================
+# Parameter Update
+# ==========================================================
 
-print('Updated w:', w_new)
-print('Updated b:', b_new)
-
-# ## Computational Graph View
-# Backpropagation works by moving backward through the computational graph, multiplying local gradients.
-
-
-# ## Why Backpropagation Matters
-# - Enables training of deep neural networks
-# - Efficient: avoids redundant computations
-# - Used in all modern DL frameworks (PyTorch, TensorFlow)
+def update_parameters(w: float, b: float, dL_dw: float, dL_db: float, lr: float):
+    """Gradient descent parameter update."""
+    w_new = w - lr * dL_dw
+    b_new = b - lr * dL_db
+    return w_new, b_new
 
 
-# ## Summary
-# - Backpropagation = chain rule + gradients
-# - Computes parameter updates efficiently
-# - Core algorithm behind deep learning
-# 
-# **This notebook completes the calculus foundation for ML/DL.**
+# ==========================================================
+# Execution Entry Point
+# ==========================================================
+
+def main():
+    # Sample data point
+    x = 2.0
+    y_true = 4.0
+
+    # Initial parameters
+    w = 1.5
+    b = 0.5
+    lr = 0.1
+
+    # Forward pass
+    y_hat = forward(x, w, b)
+    loss = mse_loss(y_true, y_hat)
+
+    print(f"Initial Prediction: {y_hat} - 07_backpropagation_math.py:94")
+    print(f"Initial Loss: {loss} - 07_backpropagation_math.py:95")
+
+    # Backward pass
+    dL_dw, dL_db = backward(x, y_true, w, b)
+
+    print(f"dL/dw: {dL_dw} - 07_backpropagation_math.py:100")
+    print(f"dL/db: {dL_db} - 07_backpropagation_math.py:101")
+
+    # Update parameters
+    w, b = update_parameters(w, b, dL_dw, dL_db, lr)
+
+    print(f"Updated w: {w} - 07_backpropagation_math.py:106")
+    print(f"Updated b: {b} - 07_backpropagation_math.py:107")
+
+
+if __name__ == "__main__":
+    main()
